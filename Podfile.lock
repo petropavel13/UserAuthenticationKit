@@ -1,0 +1,30 @@
+PODS:
+  - CollectionKit (2.3.0):
+    - CollectionKit/Core (= 2.3.0)
+  - CollectionKit/Core (2.3.0)
+  - CryptoSwift (0.13.1)
+  - KeychainAccess (3.1.2)
+  - SwiftLint (0.27.0)
+
+DEPENDENCIES:
+  - CollectionKit
+  - CryptoSwift
+  - KeychainAccess
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CollectionKit
+    - CryptoSwift
+    - KeychainAccess
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  CollectionKit: 6910479bf865bfe49040e73322ce4b8fe8991231
+  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+
+PODFILE CHECKSUM: a4174ce13ba3b2de4b9426b15db430ee9ddc54f1
+
+COCOAPODS: 1.5.3

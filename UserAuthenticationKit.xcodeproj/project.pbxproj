@@ -1,0 +1,1597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		672489F321AFC14E005DC8C7 /* PassCodeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489F221AFC14E005DC8C7 /* PassCodeDataSource.swift */; };
+		672489F421AFC14E005DC8C7 /* PassCodeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489F221AFC14E005DC8C7 /* PassCodeDataSource.swift */; };
+		672489F721AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489F621AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift */; };
+		672489F821AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489F621AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift */; };
+		672489FB21AFC29E005DC8C7 /* BasePassCodeViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489FA21AFC29E005DC8C7 /* BasePassCodeViewSource.swift */; };
+		672489FC21AFC29E005DC8C7 /* BasePassCodeViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489FA21AFC29E005DC8C7 /* BasePassCodeViewSource.swift */; };
+		672489FF21AFDC23005DC8C7 /* PassCodeCollectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489FE21AFDC23005DC8C7 /* PassCodeCollectionProvider.swift */; };
+		67248A0021AFDC23005DC8C7 /* PassCodeCollectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672489FE21AFDC23005DC8C7 /* PassCodeCollectionProvider.swift */; };
+		67248A0221AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67248A0121AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift */; };
+		67248A0321AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67248A0121AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift */; };
+		673175A72199EC1500D74E9F /* PassCodeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175A62199EC1500D74E9F /* PassCodeFlowCoordinator.swift */; };
+		673175A92199EC1500D74E9F /* PassCodeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175A62199EC1500D74E9F /* PassCodeFlowCoordinator.swift */; };
+		673175AA2199EC1500D74E9F /* PassCodeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175A62199EC1500D74E9F /* PassCodeFlowCoordinator.swift */; };
+		673175AC2199EC2A00D74E9F /* PassCodeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175AB2199EC2A00D74E9F /* PassCodeFlowDelegate.swift */; };
+		673175AE2199EC2A00D74E9F /* PassCodeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175AB2199EC2A00D74E9F /* PassCodeFlowDelegate.swift */; };
+		673175AF2199EC2A00D74E9F /* PassCodeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175AB2199EC2A00D74E9F /* PassCodeFlowDelegate.swift */; };
+		673175B22199EC4800D74E9F /* PassCodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175B12199EC4800D74E9F /* PassCodeState.swift */; };
+		673175B42199EC4800D74E9F /* PassCodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175B12199EC4800D74E9F /* PassCodeState.swift */; };
+		673175B52199EC4800D74E9F /* PassCodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175B12199EC4800D74E9F /* PassCodeState.swift */; };
+		673175B72199EC6300D74E9F /* PassCodeFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175B62199EC6300D74E9F /* PassCodeFlowError.swift */; };
+		673175B92199EC6300D74E9F /* PassCodeFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175B62199EC6300D74E9F /* PassCodeFlowError.swift */; };
+		673175BA2199EC6300D74E9F /* PassCodeFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175B62199EC6300D74E9F /* PassCodeFlowError.swift */; };
+		673175BC2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175BB2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift */; };
+		673175BE2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175BB2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift */; };
+		673175BF2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175BB2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift */; };
+		673175C12199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175C02199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift */; };
+		673175C32199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175C02199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift */; };
+		673175C42199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175C02199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift */; };
+		673175C62199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175C52199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift */; };
+		673175C82199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175C52199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift */; };
+		673175C92199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673175C52199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift */; };
+		676AFA4121AD0F3C0076F5DB /* BasePassCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4021AD0F3C0076F5DB /* BasePassCodeButton.swift */; };
+		676AFA4221AD0F3C0076F5DB /* BasePassCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4021AD0F3C0076F5DB /* BasePassCodeButton.swift */; };
+		676AFA4521AD0F820076F5DB /* PassCodeButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4421AD0F820076F5DB /* PassCodeButtonItem.swift */; };
+		676AFA4621AD0F820076F5DB /* PassCodeButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4421AD0F820076F5DB /* PassCodeButtonItem.swift */; };
+		676AFA4A21AD107D0076F5DB /* UIControl.State+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4921AD107D0076F5DB /* UIControl.State+Hashable.swift */; };
+		676AFA4B21AD107D0076F5DB /* UIControl.State+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4921AD107D0076F5DB /* UIControl.State+Hashable.swift */; };
+		676AFA4E21AD10C00076F5DB /* PassCodeButtonRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4D21AD10C00076F5DB /* PassCodeButtonRepresentable.swift */; };
+		676AFA4F21AD10C00076F5DB /* PassCodeButtonRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA4D21AD10C00076F5DB /* PassCodeButtonRepresentable.swift */; };
+		676AFA5121AD125E0076F5DB /* BasePulsePassCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA5021AD125E0076F5DB /* BasePulsePassCodeButton.swift */; };
+		676AFA5221AD125E0076F5DB /* BasePulsePassCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AFA5021AD125E0076F5DB /* BasePulsePassCodeButton.swift */; };
+		679DD04B21985CAC00140584 /* BiometricsAuthenticationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679DD04A21985CAC00140584 /* BiometricsAuthenticationParameters.swift */; };
+		679DD04D21985CAC00140584 /* BiometricsAuthenticationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679DD04A21985CAC00140584 /* BiometricsAuthenticationParameters.swift */; };
+		679DD04E21985CAC00140584 /* BiometricsAuthenticationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679DD04A21985CAC00140584 /* BiometricsAuthenticationParameters.swift */; };
+		67C1AF9421C1311600DA281E /* UIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9321C1311600DA281E /* UIViewRepresentable.swift */; };
+		67C1AF9521C1311600DA281E /* UIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9321C1311600DA281E /* UIViewRepresentable.swift */; };
+		67C1AF9721C133CF00DA281E /* PassCodeStepViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9621C133CF00DA281E /* PassCodeStepViewState.swift */; };
+		67C1AF9821C133CF00DA281E /* PassCodeStepViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9621C133CF00DA281E /* PassCodeStepViewState.swift */; };
+		67C1AF9A21C133EB00DA281E /* PassCodeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9921C133EB00DA281E /* PassCodeStepView.swift */; };
+		67C1AF9B21C133EB00DA281E /* PassCodeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9921C133EB00DA281E /* PassCodeStepView.swift */; };
+		67C1AF9D21C1343700DA281E /* PassCodeStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9C21C1343700DA281E /* PassCodeStepsView.swift */; };
+		67C1AF9E21C1343700DA281E /* PassCodeStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AF9C21C1343700DA281E /* PassCodeStepsView.swift */; };
+		67C1AFA121C1350500DA281E /* LayoutSettableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFA021C1350500DA281E /* LayoutSettableProvider.swift */; };
+		67C1AFA221C1350500DA281E /* LayoutSettableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFA021C1350500DA281E /* LayoutSettableProvider.swift */; };
+		67C1AFA521C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFA421C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift */; };
+		67C1AFA621C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFA421C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift */; };
+		67C1AFA921C135B100DA281E /* BasePassCodeDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFA821C135B100DA281E /* BasePassCodeDotView.swift */; };
+		67C1AFAA21C135B100DA281E /* BasePassCodeDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFA821C135B100DA281E /* BasePassCodeDotView.swift */; };
+		67C1AFAE21C13B7D00DA281E /* PassCodeStepsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFAD21C13B7D00DA281E /* PassCodeStepsDataSource.swift */; };
+		67C1AFAF21C13B7D00DA281E /* PassCodeStepsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFAD21C13B7D00DA281E /* PassCodeStepsDataSource.swift */; };
+		67C1AFB221C13BDA00DA281E /* PassCodeStepsViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFB121C13BDA00DA281E /* PassCodeStepsViewSource.swift */; };
+		67C1AFB321C13BDA00DA281E /* PassCodeStepsViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFB121C13BDA00DA281E /* PassCodeStepsViewSource.swift */; };
+		67C1AFB621C13C2700DA281E /* PassCodeStepsCollectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFB521C13C2700DA281E /* PassCodeStepsCollectionProvider.swift */; };
+		67C1AFB721C13C2700DA281E /* PassCodeStepsCollectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFB521C13C2700DA281E /* PassCodeStepsCollectionProvider.swift */; };
+		67C1AFBA21C1405700DA281E /* DefaultAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFB921C1405700DA281E /* DefaultAppearance.swift */; };
+		67C1AFBB21C1405700DA281E /* DefaultAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFB921C1405700DA281E /* DefaultAppearance.swift */; };
+		67C1AFBD21C1420900DA281E /* BasePassCodeStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFBC21C1420900DA281E /* BasePassCodeStepsView.swift */; };
+		67C1AFBE21C1420900DA281E /* BasePassCodeStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFBC21C1420900DA281E /* BasePassCodeStepsView.swift */; };
+		67C1AFC121C1645D00DA281E /* DefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFC021C1645D00DA281E /* DefaultSettings.swift */; };
+		67C1AFC221C1645D00DA281E /* DefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFC021C1645D00DA281E /* DefaultSettings.swift */; };
+		67C1AFC521C1651400DA281E /* DefaultSettings+PassCodeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFC421C1651400DA281E /* DefaultSettings+PassCodeSettings.swift */; };
+		67C1AFC621C1651400DA281E /* DefaultSettings+PassCodeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFC421C1651400DA281E /* DefaultSettings+PassCodeSettings.swift */; };
+		67C1AFCD21C1AF6300DA281E /* PassCodeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFCC21C1AF6300DA281E /* PassCodeViewModelDelegate.swift */; };
+		67C1AFCE21C1AF6300DA281E /* PassCodeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFCC21C1AF6300DA281E /* PassCodeViewModelDelegate.swift */; };
+		67C1AFD021C1AF8500DA281E /* BasePassCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFCF21C1AF8500DA281E /* BasePassCodeViewModel.swift */; };
+		67C1AFD121C1AF8500DA281E /* BasePassCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFCF21C1AF8500DA281E /* BasePassCodeViewModel.swift */; };
+		67C1AFD621C1B02500DA281E /* BasePassCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFD521C1B02500DA281E /* BasePassCodeViewController.swift */; };
+		67C1AFD721C1B02500DA281E /* BasePassCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1AFD521C1B02500DA281E /* BasePassCodeViewController.swift */; };
+		67D975FC2194508800D5A4EF /* BiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D975FB2194508800D5A4EF /* BiometricsService.swift */; };
+		67D975FE2194508800D5A4EF /* BiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D975FB2194508800D5A4EF /* BiometricsService.swift */; };
+		67D975FF2194508800D5A4EF /* BiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D975FB2194508800D5A4EF /* BiometricsService.swift */; };
+		67D97601219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D97600219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift */; };
+		67D97603219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D97600219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift */; };
+		67D97604219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D97600219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift */; };
+		67D976062194510B00D5A4EF /* LAContext+BiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976052194510B00D5A4EF /* LAContext+BiometricsService.swift */; };
+		67D976082194510B00D5A4EF /* LAContext+BiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976052194510B00D5A4EF /* LAContext+BiometricsService.swift */; };
+		67D976092194510B00D5A4EF /* LAContext+BiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976052194510B00D5A4EF /* LAContext+BiometricsService.swift */; };
+		67D9760B2194512C00D5A4EF /* BaseBiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9760A2194512C00D5A4EF /* BaseBiometricsService.swift */; };
+		67D9760D2194512C00D5A4EF /* BaseBiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9760A2194512C00D5A4EF /* BaseBiometricsService.swift */; };
+		67D9760E2194512C00D5A4EF /* BaseBiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9760A2194512C00D5A4EF /* BaseBiometricsService.swift */; };
+		67D97610219459A100D5A4EF /* PassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9760F219459A100D5A4EF /* PassCodeStorage.swift */; };
+		67D97612219459A100D5A4EF /* PassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9760F219459A100D5A4EF /* PassCodeStorage.swift */; };
+		67D97613219459A100D5A4EF /* PassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9760F219459A100D5A4EF /* PassCodeStorage.swift */; };
+		67D976152194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976142194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift */; };
+		67D976172194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976142194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift */; };
+		67D976182194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976142194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift */; };
+		67D9761A2194AF2D00D5A4EF /* BasePassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976192194AF2D00D5A4EF /* BasePassCodeStorage.swift */; };
+		67D9761C2194AF2D00D5A4EF /* BasePassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976192194AF2D00D5A4EF /* BasePassCodeStorage.swift */; };
+		67D9761D2194AF2D00D5A4EF /* BasePassCodeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976192194AF2D00D5A4EF /* BasePassCodeStorage.swift */; };
+		67D976242194C13E00D5A4EF /* PassCodeValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976232194C13E00D5A4EF /* PassCodeValidationRule.swift */; };
+		67D976262194C13E00D5A4EF /* PassCodeValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976232194C13E00D5A4EF /* PassCodeValidationRule.swift */; };
+		67D976272194C13E00D5A4EF /* PassCodeValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976232194C13E00D5A4EF /* PassCodeValidationRule.swift */; };
+		67D976292194C15000D5A4EF /* PassCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976282194C15000D5A4EF /* PassCodeValidator.swift */; };
+		67D9762B2194C15000D5A4EF /* PassCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976282194C15000D5A4EF /* PassCodeValidator.swift */; };
+		67D9762C2194C15000D5A4EF /* PassCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976282194C15000D5A4EF /* PassCodeValidator.swift */; };
+		67D9762E2194C17700D5A4EF /* BasePassCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9762D2194C17700D5A4EF /* BasePassCodeValidator.swift */; };
+		67D976302194C17700D5A4EF /* BasePassCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9762D2194C17700D5A4EF /* BasePassCodeValidator.swift */; };
+		67D976312194C17700D5A4EF /* BasePassCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9762D2194C17700D5A4EF /* BasePassCodeValidator.swift */; };
+		67D976332194C1A300D5A4EF /* EqualDigitsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976322194C1A300D5A4EF /* EqualDigitsValidationRule.swift */; };
+		67D976352194C1A300D5A4EF /* EqualDigitsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976322194C1A300D5A4EF /* EqualDigitsValidationRule.swift */; };
+		67D976362194C1A300D5A4EF /* EqualDigitsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976322194C1A300D5A4EF /* EqualDigitsValidationRule.swift */; };
+		67D976382194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976372194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift */; };
+		67D9763A2194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976372194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift */; };
+		67D9763B2194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D976372194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift */; };
+		67D9763E2194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */; };
+		67D976402194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */; };
+		67D976412194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */; };
+		785D1BE121C79F8C00BE97A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785D1BE021C79F8C00BE97A5 /* Assets.xcassets */; };
+		785D1BE421C79F8C00BE97A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D1BE221C79F8C00BE97A5 /* LaunchScreen.storyboard */; };
+		785D1BEB21C7A00800BE97A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D1BE921C7A00800BE97A5 /* AppDelegate.swift */; };
+		785D1BEC21C7A00800BE97A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D1BEA21C7A00800BE97A5 /* ViewController.swift */; };
+		785D1BF021C7A21800BE97A5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D1BEF21C7A21800BE97A5 /* ViewModel.swift */; };
+		785D1BF221C7A2A300BE97A5 /* BasePassCodeKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D1BF121C7A2A300BE97A5 /* BasePassCodeKeyboardViewController.swift */; };
+		785D1BF321C7A74900BE97A5 /* UserAuthenticationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_110956838379 /* UserAuthenticationKit.framework */; };
+		785D1BF421C7A74900BE97A5 /* UserAuthenticationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_110956838379 /* UserAuthenticationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		787B91CE221C0B1F002ED6C6 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787B91CD221C0B1F002ED6C6 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */; };
+		99DE4C34D736D006FC82A11C /* Pods_UserAuthenticationKit_UserAuthenticationKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAB899C0AD515C9468AD456 /* Pods_UserAuthenticationKit_UserAuthenticationKit_tvOS.framework */; };
+		AA3CE96255E76B3AB734BFBB /* Pods_UserAuthenticationKit_UserAuthenticationKit_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F93A16F48A0DAC368C90712 /* Pods_UserAuthenticationKit_UserAuthenticationKit_watchOS.framework */; };
+		BF_549510749168 /* UserAuthenticationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_179098439141 /* UserAuthenticationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_620290091798 /* UserAuthenticationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_179098439141 /* UserAuthenticationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_829486999521 /* UserAuthenticationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_179098439141 /* UserAuthenticationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		785D1BED21C7A0CB00BE97A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P_5163708601259 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = NT_110956838379;
+			remoteInfo = "UserAuthenticationKit-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785D1BF521C7A74900BE97A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				785D1BF421C7A74900BE97A5 /* UserAuthenticationKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2BAB899C0AD515C9468AD456 /* Pods_UserAuthenticationKit_UserAuthenticationKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationKit_UserAuthenticationKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D004BFF3C548AC1415D402 /* Pods_UserAuthenticationKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B17852098A26989412B3B68 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		672489F221AFC14E005DC8C7 /* PassCodeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassCodeDataSource.swift; sourceTree = "<group>"; };
+		672489F621AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeFitParentSizeSource.swift; sourceTree = "<group>"; };
+		672489FA21AFC29E005DC8C7 /* BasePassCodeViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeViewSource.swift; sourceTree = "<group>"; };
+		672489FE21AFDC23005DC8C7 /* PassCodeCollectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeCollectionProvider.swift; sourceTree = "<group>"; };
+		67248A0121AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeKeyboardView.swift; sourceTree = "<group>"; };
+		673175A62199EC1500D74E9F /* PassCodeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeFlowCoordinator.swift; sourceTree = "<group>"; };
+		673175AB2199EC2A00D74E9F /* PassCodeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeFlowDelegate.swift; sourceTree = "<group>"; };
+		673175B12199EC4800D74E9F /* PassCodeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeState.swift; sourceTree = "<group>"; };
+		673175B62199EC6300D74E9F /* PassCodeFlowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeFlowError.swift; sourceTree = "<group>"; };
+		673175BB2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeEnterFlowCoordinator.swift; sourceTree = "<group>"; };
+		673175C02199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeCreateFlowCoordinator.swift; sourceTree = "<group>"; };
+		673175C52199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeChangeFlowCoordinator.swift; sourceTree = "<group>"; };
+		676AFA4021AD0F3C0076F5DB /* BasePassCodeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeButton.swift; sourceTree = "<group>"; };
+		676AFA4421AD0F820076F5DB /* PassCodeButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeButtonItem.swift; sourceTree = "<group>"; };
+		676AFA4921AD107D0076F5DB /* UIControl.State+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl.State+Hashable.swift"; sourceTree = "<group>"; };
+		676AFA4D21AD10C00076F5DB /* PassCodeButtonRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeButtonRepresentable.swift; sourceTree = "<group>"; };
+		676AFA5021AD125E0076F5DB /* BasePulsePassCodeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePulsePassCodeButton.swift; sourceTree = "<group>"; };
+		679DD04A21985CAC00140584 /* BiometricsAuthenticationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsAuthenticationParameters.swift; sourceTree = "<group>"; };
+		67C1AF9321C1311600DA281E /* UIViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentable.swift; sourceTree = "<group>"; };
+		67C1AF9621C133CF00DA281E /* PassCodeStepViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeStepViewState.swift; sourceTree = "<group>"; };
+		67C1AF9921C133EB00DA281E /* PassCodeStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeStepView.swift; sourceTree = "<group>"; };
+		67C1AF9C21C1343700DA281E /* PassCodeStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeStepsView.swift; sourceTree = "<group>"; };
+		67C1AFA021C1350500DA281E /* LayoutSettableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSettableProvider.swift; sourceTree = "<group>"; };
+		67C1AFA421C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasicProvider+LayoutSettableProvider.swift"; sourceTree = "<group>"; };
+		67C1AFA821C135B100DA281E /* BasePassCodeDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeDotView.swift; sourceTree = "<group>"; };
+		67C1AFAD21C13B7D00DA281E /* PassCodeStepsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeStepsDataSource.swift; sourceTree = "<group>"; };
+		67C1AFB121C13BDA00DA281E /* PassCodeStepsViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeStepsViewSource.swift; sourceTree = "<group>"; };
+		67C1AFB521C13C2700DA281E /* PassCodeStepsCollectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeStepsCollectionProvider.swift; sourceTree = "<group>"; };
+		67C1AFB921C1405700DA281E /* DefaultAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppearance.swift; sourceTree = "<group>"; };
+		67C1AFBC21C1420900DA281E /* BasePassCodeStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeStepsView.swift; sourceTree = "<group>"; };
+		67C1AFC021C1645D00DA281E /* DefaultSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettings.swift; sourceTree = "<group>"; };
+		67C1AFC421C1651400DA281E /* DefaultSettings+PassCodeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultSettings+PassCodeSettings.swift"; sourceTree = "<group>"; };
+		67C1AFCC21C1AF6300DA281E /* PassCodeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeViewModelDelegate.swift; sourceTree = "<group>"; };
+		67C1AFCF21C1AF8500DA281E /* BasePassCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeViewModel.swift; sourceTree = "<group>"; };
+		67C1AFD521C1B02500DA281E /* BasePassCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeViewController.swift; sourceTree = "<group>"; };
+		67D975FB2194508800D5A4EF /* BiometricsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsService.swift; sourceTree = "<group>"; };
+		67D97600219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BiometricsService+DefaultImplementation.swift"; sourceTree = "<group>"; };
+		67D976052194510B00D5A4EF /* LAContext+BiometricsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LAContext+BiometricsService.swift"; sourceTree = "<group>"; };
+		67D9760A2194512C00D5A4EF /* BaseBiometricsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBiometricsService.swift; sourceTree = "<group>"; };
+		67D9760F219459A100D5A4EF /* PassCodeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeStorage.swift; sourceTree = "<group>"; };
+		67D976142194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseKeychainPassCodeStorage.swift; sourceTree = "<group>"; };
+		67D976192194AF2D00D5A4EF /* BasePassCodeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeStorage.swift; sourceTree = "<group>"; };
+		67D976232194C13E00D5A4EF /* PassCodeValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeValidationRule.swift; sourceTree = "<group>"; };
+		67D976282194C15000D5A4EF /* PassCodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeValidator.swift; sourceTree = "<group>"; };
+		67D9762D2194C17700D5A4EF /* BasePassCodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeValidator.swift; sourceTree = "<group>"; };
+		67D976322194C1A300D5A4EF /* EqualDigitsValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualDigitsValidationRule.swift; sourceTree = "<group>"; };
+		67D976372194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDigitsValidationRule.swift; sourceTree = "<group>"; };
+		67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+PassCodeValidation.swift"; sourceTree = "<group>"; };
+		69C4C969762A38B6C010DEBC /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig"; sourceTree = "<group>"; };
+		6D1E186A252D02F9C44F9705 /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6F93A16F48A0DAC368C90712 /* Pods_UserAuthenticationKit_UserAuthenticationKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationKit_UserAuthenticationKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		785D1BD721C79F8B00BE97A5 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		785D1BE021C79F8C00BE97A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		785D1BE321C79F8C00BE97A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		785D1BE521C79F8C00BE97A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785D1BE921C7A00800BE97A5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		785D1BEA21C7A00800BE97A5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		785D1BEF21C7A21800BE97A5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		785D1BF121C7A2A300BE97A5 /* BasePassCodeKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeKeyboardViewController.swift; sourceTree = "<group>"; };
+		785D1BF621C7A85600BE97A5 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		785D1BF721C7A85600BE97A5 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
+		785D1BF821C7A85600BE97A5 /* Info-iOS-Extension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS-Extension.plist"; sourceTree = "<group>"; };
+		785D1BF921C7A85600BE97A5 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		787B91CD221C0B1F002ED6C6 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C4B54560BF921F25154FB8 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BE73A0B604A0DCB1F3D7AF60 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D07140210A83AC30C8C1E5DD /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		D15C8519A20DDDBB59E226D9 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationKit_UserAuthenticationKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E513B23157659D65C7608BB1 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E6D982AE4B42DE93E835AAC0 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		F3F599E93F97DF9B45ADF5F8 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_110956838379 /* UserAuthenticationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserAuthenticationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_179098439141 /* UserAuthenticationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAuthenticationKit.h; sourceTree = "<group>"; };
+		FR_470909651611 /* UserAuthenticationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserAuthenticationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_856239965769 /* UserAuthenticationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserAuthenticationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		051918E6A0D4276636DBFE8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				787B91CE221C0B1F002ED6C6 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		785D1BD421C79F8B00BE97A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785D1BF321C7A74900BE97A5 /* UserAuthenticationKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E01BD5D8C8391B3FFF1949E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3CE96255E76B3AB734BFBB /* Pods_UserAuthenticationKit_UserAuthenticationKit_watchOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99CFBEFCA4012A6AD25ACE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DE4C34D736D006FC82A11C /* Pods_UserAuthenticationKit_UserAuthenticationKit_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		178B2A538D6ACC48840DCCCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5C4B54560BF921F25154FB8 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig */,
+				E513B23157659D65C7608BB1 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig */,
+				E6D982AE4B42DE93E835AAC0 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig */,
+				69C4C969762A38B6C010DEBC /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig */,
+				BE73A0B604A0DCB1F3D7AF60 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig */,
+				3B17852098A26989412B3B68 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig */,
+				6D1E186A252D02F9C44F9705 /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig */,
+				D07140210A83AC30C8C1E5DD /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		672489EC21AFC0A3005DC8C7 /* BasePassCodeKeyboardView */ = {
+			isa = PBXGroup;
+			children = (
+				672489F121AFC14E005DC8C7 /* DataSourcce */,
+				672489FD21AFDC16005DC8C7 /* Provider */,
+				672489F521AFC155005DC8C7 /* SizeSource */,
+				672489F921AFC265005DC8C7 /* ViewSource */,
+				67248A0121AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift */,
+			);
+			path = BasePassCodeKeyboardView;
+			sourceTree = "<group>";
+		};
+		672489F121AFC14E005DC8C7 /* DataSourcce */ = {
+			isa = PBXGroup;
+			children = (
+				672489F221AFC14E005DC8C7 /* PassCodeDataSource.swift */,
+			);
+			path = DataSourcce;
+			sourceTree = "<group>";
+		};
+		672489F521AFC155005DC8C7 /* SizeSource */ = {
+			isa = PBXGroup;
+			children = (
+				672489F621AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift */,
+			);
+			path = SizeSource;
+			sourceTree = "<group>";
+		};
+		672489F921AFC265005DC8C7 /* ViewSource */ = {
+			isa = PBXGroup;
+			children = (
+				672489FA21AFC29E005DC8C7 /* BasePassCodeViewSource.swift */,
+			);
+			path = ViewSource;
+			sourceTree = "<group>";
+		};
+		672489FD21AFDC16005DC8C7 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				672489FE21AFDC23005DC8C7 /* PassCodeCollectionProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		673175A52199EBF700D74E9F /* FlowCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+				673175BB2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift */,
+				673175C02199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift */,
+				673175C52199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift */,
+			);
+			path = FlowCoordinators;
+			sourceTree = "<group>";
+		};
+		673175B02199EC3C00D74E9F /* PassCode */ = {
+			isa = PBXGroup;
+			children = (
+				676AFA4321AD0F750076F5DB /* Views */,
+				673175B62199EC6300D74E9F /* PassCodeFlowError.swift */,
+				673175B12199EC4800D74E9F /* PassCodeState.swift */,
+			);
+			path = PassCode;
+			sourceTree = "<group>";
+		};
+		676AFA3E21AD0F090076F5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFAB21C13A9000DA281E /* BasePassCodeStepsView */,
+				67C1AFA721C1359E00DA281E /* BasePassCodeDotView */,
+				672489EC21AFC0A3005DC8C7 /* BasePassCodeKeyboardView */,
+				676AFA4021AD0F3C0076F5DB /* BasePassCodeButton.swift */,
+				676AFA5021AD125E0076F5DB /* BasePulsePassCodeButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		676AFA4321AD0F750076F5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				676AFA4421AD0F820076F5DB /* PassCodeButtonItem.swift */,
+				67C1AF9621C133CF00DA281E /* PassCodeStepViewState.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		676AFA4721AD105C0076F5DB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				676AFA4821AD10630076F5DB /* UIControl */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		676AFA4821AD10630076F5DB /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				676AFA4921AD107D0076F5DB /* UIControl.State+Hashable.swift */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		676AFA4C21AD10B70076F5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				676AFA4D21AD10C00076F5DB /* PassCodeButtonRepresentable.swift */,
+				67C1AF9321C1311600DA281E /* UIViewRepresentable.swift */,
+				67C1AF9921C133EB00DA281E /* PassCodeStepView.swift */,
+				67C1AF9C21C1343700DA281E /* PassCodeStepsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		679DD04921985C9D00140584 /* Biometrics */ = {
+			isa = PBXGroup;
+			children = (
+				679DD04A21985CAC00140584 /* BiometricsAuthenticationParameters.swift */,
+			);
+			path = Biometrics;
+			sourceTree = "<group>";
+		};
+		67C1AF9F21C134E100DA281E /* CollectionKit */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFA021C1350500DA281E /* LayoutSettableProvider.swift */,
+			);
+			path = CollectionKit;
+			sourceTree = "<group>";
+		};
+		67C1AFA321C1352F00DA281E /* CollectionKit */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFA421C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift */,
+			);
+			path = CollectionKit;
+			sourceTree = "<group>";
+		};
+		67C1AFA721C1359E00DA281E /* BasePassCodeDotView */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFA821C135B100DA281E /* BasePassCodeDotView.swift */,
+			);
+			path = BasePassCodeDotView;
+			sourceTree = "<group>";
+		};
+		67C1AFAB21C13A9000DA281E /* BasePassCodeStepsView */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFAC21C13B6F00DA281E /* DataSource */,
+				67C1AFB421C13C1D00DA281E /* Provider */,
+				67C1AFB021C13BCE00DA281E /* ViewSource */,
+				67C1AFBC21C1420900DA281E /* BasePassCodeStepsView.swift */,
+			);
+			path = BasePassCodeStepsView;
+			sourceTree = "<group>";
+		};
+		67C1AFAC21C13B6F00DA281E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFAD21C13B7D00DA281E /* PassCodeStepsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		67C1AFB021C13BCE00DA281E /* ViewSource */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFB121C13BDA00DA281E /* PassCodeStepsViewSource.swift */,
+			);
+			path = ViewSource;
+			sourceTree = "<group>";
+		};
+		67C1AFB421C13C1D00DA281E /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFB521C13C2700DA281E /* PassCodeStepsCollectionProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		67C1AFB821C1404200DA281E /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFB921C1405700DA281E /* DefaultAppearance.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		67C1AFBF21C1645000DA281E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFC021C1645D00DA281E /* DefaultSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		67C1AFC321C164EE00DA281E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFC421C1651400DA281E /* DefaultSettings+PassCodeSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		67C1AFC721C1AE8900DA281E /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				67D976232194C13E00D5A4EF /* PassCodeValidationRule.swift */,
+				67D976282194C15000D5A4EF /* PassCodeValidator.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		67C1AFC821C1AF0100DA281E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				67D976142194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift */,
+				67D976192194AF2D00D5A4EF /* BasePassCodeStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		67C1AFC921C1AF2E00DA281E /* FlowCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+				673175A62199EC1500D74E9F /* PassCodeFlowCoordinator.swift */,
+				673175AB2199EC2A00D74E9F /* PassCodeFlowDelegate.swift */,
+			);
+			path = FlowCoordinators;
+			sourceTree = "<group>";
+		};
+		67C1AFCA21C1AF3C00DA281E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				67D9760F219459A100D5A4EF /* PassCodeStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		67C1AFCB21C1AF5700DA281E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFCC21C1AF6300DA281E /* PassCodeViewModelDelegate.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		67C1AFD221C1AFE500DA281E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFCF21C1AF8500DA281E /* BasePassCodeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		67C1AFD321C1AFED00DA281E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFD221C1AFE500DA281E /* ViewModel */,
+				67C1AFD521C1B02500DA281E /* BasePassCodeViewController.swift */,
+				785D1BF121C7A2A300BE97A5 /* BasePassCodeKeyboardViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		67C1AFD421C1B00B00DA281E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFCB21C1AF5700DA281E /* ViewModel */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		67D9761E2194AF3000D5A4EF /* PassCode */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFD321C1AFED00DA281E /* Controllers */,
+				673175A52199EBF700D74E9F /* FlowCoordinators */,
+				67C1AFC821C1AF0100DA281E /* Storage */,
+				67D976422194C26600D5A4EF /* Validation */,
+				676AFA3E21AD0F090076F5DB /* Views */,
+			);
+			path = PassCode;
+			sourceTree = "<group>";
+		};
+		67D9761F2194AF3C00D5A4EF /* Biometrics */ = {
+			isa = PBXGroup;
+			children = (
+				67D9760A2194512C00D5A4EF /* BaseBiometricsService.swift */,
+			);
+			path = Biometrics;
+			sourceTree = "<group>";
+		};
+		67D976202194AFAC00D5A4EF /* Biometrics */ = {
+			isa = PBXGroup;
+			children = (
+				67D976052194510B00D5A4EF /* LAContext+BiometricsService.swift */,
+				67D97600219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift */,
+			);
+			path = Biometrics;
+			sourceTree = "<group>";
+		};
+		67D976212194AFBD00D5A4EF /* Biometrics */ = {
+			isa = PBXGroup;
+			children = (
+				67D975FB2194508800D5A4EF /* BiometricsService.swift */,
+			);
+			path = Biometrics;
+			sourceTree = "<group>";
+		};
+		67D976222194AFC900D5A4EF /* PassCode */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFD421C1B00B00DA281E /* Controllers */,
+				67C1AFC921C1AF2E00DA281E /* FlowCoordinators */,
+				67C1AFCA21C1AF3C00DA281E /* Storage */,
+				67C1AFC721C1AE8900DA281E /* Validation */,
+				676AFA4C21AD10B70076F5DB /* Views */,
+			);
+			path = PassCode;
+			sourceTree = "<group>";
+		};
+		67D9763C2194C1D500D5A4EF /* PassCode */ = {
+			isa = PBXGroup;
+			children = (
+				67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */,
+			);
+			path = PassCode;
+			sourceTree = "<group>";
+		};
+		67D976422194C26600D5A4EF /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				67D9762D2194C17700D5A4EF /* BasePassCodeValidator.swift */,
+				67D976322194C1A300D5A4EF /* EqualDigitsValidationRule.swift */,
+				67D976372194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		785D1BD821C79F8B00BE97A5 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				785D1BE921C7A00800BE97A5 /* AppDelegate.swift */,
+				785D1BEA21C7A00800BE97A5 /* ViewController.swift */,
+				785D1BEF21C7A21800BE97A5 /* ViewModel.swift */,
+				785D1BE021C79F8C00BE97A5 /* Assets.xcassets */,
+				785D1BE221C79F8C00BE97A5 /* LaunchScreen.storyboard */,
+				785D1BE521C79F8C00BE97A5 /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		7BD6DCF1E411E45C31C7EFFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				787B91CD221C0B1F002ED6C6 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */,
+				D15C8519A20DDDBB59E226D9 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS.framework */,
+				F3F599E93F97DF9B45ADF5F8 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */,
+				2BAB899C0AD515C9468AD456 /* Pods_UserAuthenticationKit_UserAuthenticationKit_tvOS.framework */,
+				6F93A16F48A0DAC368C90712 /* Pods_UserAuthenticationKit_UserAuthenticationKit_watchOS.framework */,
+				37D004BFF3C548AC1415D402 /* Pods_UserAuthenticationKit_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G_1435969344797 = {
+			isa = PBXGroup;
+			children = (
+				G_3793602694552 /* Sources */,
+				785D1BD821C79F8B00BE97A5 /* Example */,
+				G_4611750103798 /* Products */,
+				178B2A538D6ACC48840DCCCF /* Pods */,
+				7BD6DCF1E411E45C31C7EFFC /* Frameworks */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		G_2973530573973 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		G_3330490527015 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67D976202194AFAC00D5A4EF /* Biometrics */,
+				67C1AFA321C1352F00DA281E /* CollectionKit */,
+				67D9763C2194C1D500D5A4EF /* PassCode */,
+				67C1AFC321C164EE00DA281E /* Settings */,
+				676AFA4721AD105C0076F5DB /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		G_3793602694552 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				G_7382249353035 /* Classes */,
+				G_5341535495811 /* Enums */,
+				G_3330490527015 /* Extensions */,
+				G_2973530573973 /* Functions */,
+				G_8565252420934 /* Protocols */,
+				G_4519958098165 /* Structures */,
+				785D1BF821C7A85600BE97A5 /* Info-iOS-Extension.plist */,
+				785D1BF921C7A85600BE97A5 /* Info-iOS.plist */,
+				785D1BF621C7A85600BE97A5 /* Info-tvOS.plist */,
+				785D1BF721C7A85600BE97A5 /* Info-watchOS.plist */,
+				FR_179098439141 /* UserAuthenticationKit.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		G_4519958098165 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AFBF21C1645000DA281E /* Settings */,
+				67C1AFB821C1404200DA281E /* Appearance */,
+				679DD04921985C9D00140584 /* Biometrics */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		G_4611750103798 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FR_110956838379 /* UserAuthenticationKit.framework */,
+				FR_470909651611 /* UserAuthenticationKit.framework */,
+				FR_856239965769 /* UserAuthenticationKit.framework */,
+				785D1BD721C79F8B00BE97A5 /* Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G_5341535495811 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				673175B02199EC3C00D74E9F /* PassCode */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		G_7382249353035 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				67D9761F2194AF3C00D5A4EF /* Biometrics */,
+				67D9761E2194AF3000D5A4EF /* PassCode */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		G_8565252420934 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				67C1AF9F21C134E100DA281E /* CollectionKit */,
+				67D976212194AFBD00D5A4EF /* Biometrics */,
+				67D976222194AFC900D5A4EF /* PassCode */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		HBP_11095683837 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_620290091798 /* UserAuthenticationKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		HBP_47090965161 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_549510749168 /* UserAuthenticationKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		HBP_85623996576 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_829486999521 /* UserAuthenticationKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		785D1BD621C79F8B00BE97A5 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785D1BE621C79F8C00BE97A5 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				785D1BD321C79F8B00BE97A5 /* Sources */,
+				785D1BD421C79F8B00BE97A5 /* Frameworks */,
+				785D1BD521C79F8B00BE97A5 /* Resources */,
+				785D1BF521C7A74900BE97A5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				785D1BEE21C7A0CB00BE97A5 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = 785D1BD721C79F8B00BE97A5 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		NT_110956838379 /* UserAuthenticationKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_110956838379 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-iOS" */;
+			buildPhases = (
+				6129AA3FBFC8AEE29D1A6B6A /* [CP] Check Pods Manifest.lock */,
+				HBP_11095683837 /* Headers */,
+				SBP_11095683837 /* Sources */,
+				SSBP_9199505650 /* Swiftlint */,
+				SSBP_3922203938 /* CopyPaste Detection */,
+				051918E6A0D4276636DBFE8D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UserAuthenticationKit-iOS";
+			productName = "UserAuthenticationKit-iOS";
+			productReference = FR_110956838379 /* UserAuthenticationKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		NT_470909651611 /* UserAuthenticationKit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_470909651611 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-tvOS" */;
+			buildPhases = (
+				A6B36D653D8651873B3E4307 /* [CP] Check Pods Manifest.lock */,
+				HBP_47090965161 /* Headers */,
+				SBP_47090965161 /* Sources */,
+				SSBP_7315032155 /* Swiftlint */,
+				SSBP_3190483398 /* CopyPaste Detection */,
+				E99CFBEFCA4012A6AD25ACE8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UserAuthenticationKit-tvOS";
+			productName = "UserAuthenticationKit-tvOS";
+			productReference = FR_470909651611 /* UserAuthenticationKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		NT_856239965769 /* UserAuthenticationKit-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_856239965769 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-watchOS" */;
+			buildPhases = (
+				FF5ED2DBDFDFFC149FDC7F33 /* [CP] Check Pods Manifest.lock */,
+				HBP_85623996576 /* Headers */,
+				SBP_85623996576 /* Sources */,
+				SSBP_1962148793 /* Swiftlint */,
+				SSBP_4810626197 /* CopyPaste Detection */,
+				9E01BD5D8C8391B3FFF1949E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UserAuthenticationKit-watchOS";
+			productName = "UserAuthenticationKit-watchOS";
+			productReference = FR_856239965769 /* UserAuthenticationKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P_5163708601259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					785D1BD621C79F8B00BE97A5 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CL_516370860125 /* Build configuration list for PBXProject "UserAuthenticationKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G_1435969344797;
+			productRefGroup = G_4611750103798 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				NT_110956838379 /* UserAuthenticationKit-iOS */,
+				NT_470909651611 /* UserAuthenticationKit-tvOS */,
+				NT_856239965769 /* UserAuthenticationKit-watchOS */,
+				785D1BD621C79F8B00BE97A5 /* Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		785D1BD521C79F8B00BE97A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785D1BE421C79F8C00BE97A5 /* LaunchScreen.storyboard in Resources */,
+				785D1BE121C79F8C00BE97A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6129AA3FBFC8AEE29D1A6B6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6B36D653D8651873B3E4307 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF5ED2DBDFDFFC149FDC7F33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		SSBP_1962148793 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". build-scripts/xcode/build_phases/swiftlint.sh Sources";
+		};
+		SSBP_3190483398 /* CopyPaste Detection */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "CopyPaste Detection";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". build-scripts/xcode/build_phases/copy_paste_detection.sh Sources";
+		};
+		SSBP_3922203938 /* CopyPaste Detection */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "CopyPaste Detection";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". build-scripts/xcode/build_phases/copy_paste_detection.sh Sources";
+		};
+		SSBP_4810626197 /* CopyPaste Detection */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "CopyPaste Detection";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". build-scripts/xcode/build_phases/copy_paste_detection.sh Sources";
+		};
+		SSBP_7315032155 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". build-scripts/xcode/build_phases/swiftlint.sh Sources";
+		};
+		SSBP_9199505650 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#. build-scripts/xcode/build_phases/swiftlint.sh Sources\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785D1BD321C79F8B00BE97A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785D1BEC21C7A00800BE97A5 /* ViewController.swift in Sources */,
+				785D1BF021C7A21800BE97A5 /* ViewModel.swift in Sources */,
+				785D1BEB21C7A00800BE97A5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_11095683837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672489FF21AFDC23005DC8C7 /* PassCodeCollectionProvider.swift in Sources */,
+				67D97610219459A100D5A4EF /* PassCodeStorage.swift in Sources */,
+				67C1AF9D21C1343700DA281E /* PassCodeStepsView.swift in Sources */,
+				67D9760B2194512C00D5A4EF /* BaseBiometricsService.swift in Sources */,
+				67C1AF9721C133CF00DA281E /* PassCodeStepViewState.swift in Sources */,
+				67C1AFA921C135B100DA281E /* BasePassCodeDotView.swift in Sources */,
+				676AFA4A21AD107D0076F5DB /* UIControl.State+Hashable.swift in Sources */,
+				67D976292194C15000D5A4EF /* PassCodeValidator.swift in Sources */,
+				67C1AF9421C1311600DA281E /* UIViewRepresentable.swift in Sources */,
+				676AFA5121AD125E0076F5DB /* BasePulsePassCodeButton.swift in Sources */,
+				67D975FC2194508800D5A4EF /* BiometricsService.swift in Sources */,
+				67248A0221AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift in Sources */,
+				67C1AF9A21C133EB00DA281E /* PassCodeStepView.swift in Sources */,
+				676AFA4121AD0F3C0076F5DB /* BasePassCodeButton.swift in Sources */,
+				67C1AFD621C1B02500DA281E /* BasePassCodeViewController.swift in Sources */,
+				67D9763E2194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */,
+				676AFA4E21AD10C00076F5DB /* PassCodeButtonRepresentable.swift in Sources */,
+				672489F721AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift in Sources */,
+				67C1AFA121C1350500DA281E /* LayoutSettableProvider.swift in Sources */,
+				67C1AFB621C13C2700DA281E /* PassCodeStepsCollectionProvider.swift in Sources */,
+				785D1BF221C7A2A300BE97A5 /* BasePassCodeKeyboardViewController.swift in Sources */,
+				67D976062194510B00D5A4EF /* LAContext+BiometricsService.swift in Sources */,
+				67D976242194C13E00D5A4EF /* PassCodeValidationRule.swift in Sources */,
+				67C1AFC521C1651400DA281E /* DefaultSettings+PassCodeSettings.swift in Sources */,
+				67C1AFBD21C1420900DA281E /* BasePassCodeStepsView.swift in Sources */,
+				673175B22199EC4800D74E9F /* PassCodeState.swift in Sources */,
+				673175B72199EC6300D74E9F /* PassCodeFlowError.swift in Sources */,
+				672489F321AFC14E005DC8C7 /* PassCodeDataSource.swift in Sources */,
+				672489FB21AFC29E005DC8C7 /* BasePassCodeViewSource.swift in Sources */,
+				67D976332194C1A300D5A4EF /* EqualDigitsValidationRule.swift in Sources */,
+				67C1AFAE21C13B7D00DA281E /* PassCodeStepsDataSource.swift in Sources */,
+				67D976152194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift in Sources */,
+				67D976382194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift in Sources */,
+				67C1AFBA21C1405700DA281E /* DefaultAppearance.swift in Sources */,
+				673175AC2199EC2A00D74E9F /* PassCodeFlowDelegate.swift in Sources */,
+				67C1AFCD21C1AF6300DA281E /* PassCodeViewModelDelegate.swift in Sources */,
+				679DD04B21985CAC00140584 /* BiometricsAuthenticationParameters.swift in Sources */,
+				67D9762E2194C17700D5A4EF /* BasePassCodeValidator.swift in Sources */,
+				676AFA4521AD0F820076F5DB /* PassCodeButtonItem.swift in Sources */,
+				67C1AFA521C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift in Sources */,
+				673175C62199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift in Sources */,
+				673175C12199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift in Sources */,
+				673175A72199EC1500D74E9F /* PassCodeFlowCoordinator.swift in Sources */,
+				67C1AFD021C1AF8500DA281E /* BasePassCodeViewModel.swift in Sources */,
+				67D9761A2194AF2D00D5A4EF /* BasePassCodeStorage.swift in Sources */,
+				67C1AFB221C13BDA00DA281E /* PassCodeStepsViewSource.swift in Sources */,
+				673175BC2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift in Sources */,
+				67C1AFC121C1645D00DA281E /* DefaultSettings.swift in Sources */,
+				67D97601219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_47090965161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67248A0021AFDC23005DC8C7 /* PassCodeCollectionProvider.swift in Sources */,
+				67D97612219459A100D5A4EF /* PassCodeStorage.swift in Sources */,
+				67C1AF9E21C1343700DA281E /* PassCodeStepsView.swift in Sources */,
+				67D9760D2194512C00D5A4EF /* BaseBiometricsService.swift in Sources */,
+				67C1AF9821C133CF00DA281E /* PassCodeStepViewState.swift in Sources */,
+				67C1AFAA21C135B100DA281E /* BasePassCodeDotView.swift in Sources */,
+				676AFA4B21AD107D0076F5DB /* UIControl.State+Hashable.swift in Sources */,
+				67D9762B2194C15000D5A4EF /* PassCodeValidator.swift in Sources */,
+				67C1AF9521C1311600DA281E /* UIViewRepresentable.swift in Sources */,
+				676AFA5221AD125E0076F5DB /* BasePulsePassCodeButton.swift in Sources */,
+				67D975FE2194508800D5A4EF /* BiometricsService.swift in Sources */,
+				67248A0321AFDF28005DC8C7 /* BasePassCodeKeyboardView.swift in Sources */,
+				67C1AF9B21C133EB00DA281E /* PassCodeStepView.swift in Sources */,
+				676AFA4221AD0F3C0076F5DB /* BasePassCodeButton.swift in Sources */,
+				67C1AFD721C1B02500DA281E /* BasePassCodeViewController.swift in Sources */,
+				67D976402194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */,
+				676AFA4F21AD10C00076F5DB /* PassCodeButtonRepresentable.swift in Sources */,
+				672489F821AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift in Sources */,
+				67C1AFA221C1350500DA281E /* LayoutSettableProvider.swift in Sources */,
+				67C1AFB721C13C2700DA281E /* PassCodeStepsCollectionProvider.swift in Sources */,
+				67D976082194510B00D5A4EF /* LAContext+BiometricsService.swift in Sources */,
+				67D976262194C13E00D5A4EF /* PassCodeValidationRule.swift in Sources */,
+				67C1AFC621C1651400DA281E /* DefaultSettings+PassCodeSettings.swift in Sources */,
+				67C1AFBE21C1420900DA281E /* BasePassCodeStepsView.swift in Sources */,
+				673175B42199EC4800D74E9F /* PassCodeState.swift in Sources */,
+				673175B92199EC6300D74E9F /* PassCodeFlowError.swift in Sources */,
+				672489F421AFC14E005DC8C7 /* PassCodeDataSource.swift in Sources */,
+				672489FC21AFC29E005DC8C7 /* BasePassCodeViewSource.swift in Sources */,
+				67D976352194C1A300D5A4EF /* EqualDigitsValidationRule.swift in Sources */,
+				67C1AFAF21C13B7D00DA281E /* PassCodeStepsDataSource.swift in Sources */,
+				67D976172194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift in Sources */,
+				67D9763A2194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift in Sources */,
+				67C1AFBB21C1405700DA281E /* DefaultAppearance.swift in Sources */,
+				673175AE2199EC2A00D74E9F /* PassCodeFlowDelegate.swift in Sources */,
+				67C1AFCE21C1AF6300DA281E /* PassCodeViewModelDelegate.swift in Sources */,
+				679DD04D21985CAC00140584 /* BiometricsAuthenticationParameters.swift in Sources */,
+				67D976302194C17700D5A4EF /* BasePassCodeValidator.swift in Sources */,
+				676AFA4621AD0F820076F5DB /* PassCodeButtonItem.swift in Sources */,
+				67C1AFA621C1354300DA281E /* BasicProvider+LayoutSettableProvider.swift in Sources */,
+				673175C82199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift in Sources */,
+				673175C32199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift in Sources */,
+				673175A92199EC1500D74E9F /* PassCodeFlowCoordinator.swift in Sources */,
+				67C1AFD121C1AF8500DA281E /* BasePassCodeViewModel.swift in Sources */,
+				67D9761C2194AF2D00D5A4EF /* BasePassCodeStorage.swift in Sources */,
+				67C1AFB321C13BDA00DA281E /* PassCodeStepsViewSource.swift in Sources */,
+				673175BE2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift in Sources */,
+				67C1AFC221C1645D00DA281E /* DefaultSettings.swift in Sources */,
+				67D97603219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_85623996576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67D97613219459A100D5A4EF /* PassCodeStorage.swift in Sources */,
+				67D9760E2194512C00D5A4EF /* BaseBiometricsService.swift in Sources */,
+				67D9762C2194C15000D5A4EF /* PassCodeValidator.swift in Sources */,
+				67D975FF2194508800D5A4EF /* BiometricsService.swift in Sources */,
+				67D976412194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */,
+				67D976092194510B00D5A4EF /* LAContext+BiometricsService.swift in Sources */,
+				67D976272194C13E00D5A4EF /* PassCodeValidationRule.swift in Sources */,
+				673175B52199EC4800D74E9F /* PassCodeState.swift in Sources */,
+				673175BA2199EC6300D74E9F /* PassCodeFlowError.swift in Sources */,
+				67D976362194C1A300D5A4EF /* EqualDigitsValidationRule.swift in Sources */,
+				67D976182194AF0800D5A4EF /* BaseKeychainPassCodeStorage.swift in Sources */,
+				67D9763B2194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift in Sources */,
+				673175AF2199EC2A00D74E9F /* PassCodeFlowDelegate.swift in Sources */,
+				679DD04E21985CAC00140584 /* BiometricsAuthenticationParameters.swift in Sources */,
+				67D976312194C17700D5A4EF /* BasePassCodeValidator.swift in Sources */,
+				673175C92199ECE300D74E9F /* BasePassCodeChangeFlowCoordinator.swift in Sources */,
+				673175C42199ECD000D74E9F /* BasePassCodeCreateFlowCoordinator.swift in Sources */,
+				673175AA2199EC1500D74E9F /* PassCodeFlowCoordinator.swift in Sources */,
+				67D9761D2194AF2D00D5A4EF /* BasePassCodeStorage.swift in Sources */,
+				673175BF2199ECB500D74E9F /* BasePassCodeEnterFlowCoordinator.swift in Sources */,
+				67D97604219450B400D5A4EF /* BiometricsService+DefaultImplementation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		785D1BEE21C7A0CB00BE97A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = NT_110956838379 /* UserAuthenticationKit-iOS */;
+			targetProxy = 785D1BED21C7A0CB00BE97A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		785D1BE221C79F8C00BE97A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				785D1BE321C79F8C00BE97A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		785D1BE721C79F8C00BE97A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = touchin.ru.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		785D1BE821C79F8C00BE97A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = touchin.ru.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC_294955451944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D07140210A83AC30C8C1E5DD /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				PRODUCT_NAME = UserAuthenticationKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BC_309557304354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D1E186A252D02F9C44F9705 /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				PRODUCT_NAME = UserAuthenticationKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		BC_441506936932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B17852098A26989412B3B68 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = UserAuthenticationKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BC_444451906301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		BC_545686856592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E513B23157659D65C7608BB1 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = UserAuthenticationKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BC_724322140819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE73A0B604A0DCB1F3D7AF60 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = UserAuthenticationKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		BC_847859312469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		BC_870390609568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C4B54560BF921F25154FB8 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = UserAuthenticationKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785D1BE621C79F8C00BE97A5 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785D1BE721C79F8C00BE97A5 /* Debug */,
+				785D1BE821C79F8C00BE97A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CL_110956838379 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_870390609568 /* Debug */,
+				BC_545686856592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		CL_470909651611 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_724322140819 /* Debug */,
+				BC_441506936932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		CL_516370860125 /* Build configuration list for PBXProject "UserAuthenticationKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_847859312469 /* Debug */,
+				BC_444451906301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CL_856239965769 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_309557304354 /* Debug */,
+				BC_294955451944 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P_5163708601259 /* Project object */;
+}
