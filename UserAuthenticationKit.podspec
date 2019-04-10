@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name            = "UserAuthenticationKit"
-  s.version         = "0.1"
+  s.version         = "0.0.1"
   s.summary         = "User authentication framework for iOS"
   s.homepage        = "https://github.com/TouchInstinct/UserAuthenticationKit"
   s.license         = "Apache License, Version 2.0"
