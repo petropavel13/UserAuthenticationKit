@@ -1,0 +1,3 @@
+$(SRCROOT)/Carthage/Build/iOS/CollectionKit.framework
+$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework

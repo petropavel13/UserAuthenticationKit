@@ -1,0 +1,3 @@
+binary "https://raw.github.com/TouchInstinct/CarthageBinaries/master/CryptoSwift/CryptoSwift.json" "0.14.0"
+binary "https://raw.github.com/TouchInstinct/CarthageBinaries/master/KeychainAccess/KeychainAccess.json" "3.2.0"
+github "SoySauceLab/CollectionKit" "2.4.0"

@@ -1,2 +1,3 @@
 binary "https://raw.github.com/TouchInstinct/CarthageBinaries/master/KeychainAccess/KeychainAccess.json"
 binary "https://raw.github.com/TouchInstinct/CarthageBinaries/master/CollectionKit/CollectionKit.json"
+binary "https://raw.github.com/TouchInstinct/CarthageBinaries/master/CryptoSwift/CryptoSwift.json"

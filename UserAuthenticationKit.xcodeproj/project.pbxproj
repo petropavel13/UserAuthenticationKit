@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -104,7 +104,6 @@
 		67D9763E2194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */; };
 		67D976402194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */; };
 		67D976412194C1EA00D5A4EF /* String+PassCodeValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */; };
-		6FAC58B14692D305D76BF465 /* libPods-UserAuthenticationKit-UserAuthenticationKit-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E9AD54B223E6B8625322A2 /* libPods-UserAuthenticationKit-UserAuthenticationKit-tvOS.a */; };
 		7839695F225DCFB0006453E2 /* CustomPassCodeButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7839695E225DCFB0006453E2 /* CustomPassCodeButtonItem.swift */; };
 		78396961225DD2E6006453E2 /* CustomPassCodeViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78396960225DD2E6006453E2 /* CustomPassCodeViewSource.swift */; };
 		78396963225DD8DF006453E2 /* PassCodeFlowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78396962225DD8DF006453E2 /* PassCodeFlowType.swift */; };
@@ -116,6 +115,17 @@
 		785D1BEC21C7A00800BE97A5 /* PassCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D1BEA21C7A00800BE97A5 /* PassCodeViewController.swift */; };
 		785D1BF021C7A21800BE97A5 /* PassCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D1BEF21C7A21800BE97A5 /* PassCodeViewModel.swift */; };
 		785D1BF221C7A2A300BE97A5 /* BasePassCodeKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D1BF121C7A2A300BE97A5 /* BasePassCodeKeyboardViewController.swift */; };
+		789443AE225E780D00072D14 /* CollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443AC225E780D00072D14 /* CollectionKit.framework */; };
+		789443AF225E780D00072D14 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443AD225E780D00072D14 /* KeychainAccess.framework */; };
+		789443B1225E785000072D14 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443B0225E785000072D14 /* KeychainAccess.framework */; };
+		789443B3225E786100072D14 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443B2225E786100072D14 /* KeychainAccess.framework */; };
+		789443B7225E78DE00072D14 /* UserAuthenticationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_110956838379 /* UserAuthenticationKit.framework */; };
+		789443B9225E7A7800072D14 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443B8225E7A7700072D14 /* CryptoSwift.framework */; };
+		789443BB225E7A8500072D14 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443BA225E7A8500072D14 /* CryptoSwift.framework */; };
+		789443BD225E7A9200072D14 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443BC225E7A9200072D14 /* CryptoSwift.framework */; };
+		789443BE225E7CD400072D14 /* CollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443AC225E780D00072D14 /* CollectionKit.framework */; };
+		789443BF225E7CD400072D14 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443B8225E7A7700072D14 /* CryptoSwift.framework */; };
+		789443C0225E7CD400072D14 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789443AD225E780D00072D14 /* KeychainAccess.framework */; };
 		78A0F623225D072D008FD8CE /* BaseBiometricsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D9760A2194512C00D5A4EF /* BaseBiometricsService.swift */; };
 		78A0F626225D0989008FD8CE /* UIVIew+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0F625225D0989008FD8CE /* UIVIew+AddSubviews.swift */; };
 		78A0F627225D0989008FD8CE /* UIVIew+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0F625225D0989008FD8CE /* UIVIew+AddSubviews.swift */; };
@@ -123,23 +133,22 @@
 		78DECB2F225E020900BD975F /* BasePassCodeCreateFlowCoordinator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DECB2E225E020900BD975F /* BasePassCodeCreateFlowCoordinator+Extensions.swift */; };
 		78DECB31225E026B00BD975F /* BasePassCodeChangeFlowCoordinator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DECB30225E026B00BD975F /* BasePassCodeChangeFlowCoordinator+Extensions.swift */; };
 		78DECB33225E2EA300BD975F /* CustomPassCodeStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DECB32225E2EA300BD975F /* CustomPassCodeStepsView.swift */; };
-		96857981668A025120167146 /* libPods-UserAuthenticationKit-UserAuthenticationKit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA55F69AC0C3804D6BC6225 /* libPods-UserAuthenticationKit-UserAuthenticationKit-iOS.a */; };
-		9A80A69239A218CB0F247E1E /* libPods-UserAuthenticationKit-UserAuthenticationKit-watchOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35722C0371E704A46ECDA609 /* libPods-UserAuthenticationKit-UserAuthenticationKit-watchOS.a */; };
 		BF_549510749168 /* UserAuthenticationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_179098439141 /* UserAuthenticationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF_620290091798 /* UserAuthenticationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_179098439141 /* UserAuthenticationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF_829486999521 /* UserAuthenticationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_179098439141 /* UserAuthenticationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3ADA058802482ADEDCD3DE1 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12693DF1EF6C791124E5A2 /* libPods-Example.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		789443B4225E787B00072D14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P_5163708601259 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = NT_110956838379;
+			remoteInfo = "UserAuthenticationKit-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		075E57C2730897E7C136C5A0 /* Pods-UserAuthenticationKit-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-Example/Pods-UserAuthenticationKit-Example.release.xcconfig"; sourceTree = "<group>"; };
-		263D7B65588B2599C800C9DA /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		35722C0371E704A46ECDA609 /* libPods-UserAuthenticationKit-UserAuthenticationKit-watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UserAuthenticationKit-UserAuthenticationKit-watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36FEE59498DB10300E19708A /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		37D004BFF3C548AC1415D402 /* Pods_UserAuthenticationKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		386D5D3968917283E937128F /* Pods-UserAuthenticationKit-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-Example/Pods-UserAuthenticationKit-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3B17852098A26989412B3B68 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		59E9AD54B223E6B8625322A2 /* libPods-UserAuthenticationKit-UserAuthenticationKit-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UserAuthenticationKit-UserAuthenticationKit-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		672489F221AFC14E005DC8C7 /* PassCodeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassCodeDataSource.swift; sourceTree = "<group>"; };
 		672489F621AFC162005DC8C7 /* PassCodeFitParentSizeSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeFitParentSizeSource.swift; sourceTree = "<group>"; };
 		672489FA21AFC29E005DC8C7 /* BasePassCodeViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePassCodeViewSource.swift; sourceTree = "<group>"; };
@@ -187,8 +196,6 @@
 		67D976322194C1A300D5A4EF /* EqualDigitsValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualDigitsValidationRule.swift; sourceTree = "<group>"; };
 		67D976372194C1BA00D5A4EF /* OrderedDigitsValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDigitsValidationRule.swift; sourceTree = "<group>"; };
 		67D9763D2194C1EA00D5A4EF /* String+PassCodeValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+PassCodeValidation.swift"; sourceTree = "<group>"; };
-		69C4C969762A38B6C010DEBC /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig"; sourceTree = "<group>"; };
-		6D1E186A252D02F9C44F9705 /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7839695E225DCFB0006453E2 /* CustomPassCodeButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPassCodeButtonItem.swift; sourceTree = "<group>"; };
 		78396960225DD2E6006453E2 /* CustomPassCodeViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPassCodeViewSource.swift; sourceTree = "<group>"; };
 		78396962225DD8DF006453E2 /* PassCodeFlowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeFlowType.swift; sourceTree = "<group>"; };
@@ -203,20 +210,18 @@
 		785D1BF621C7A85600BE97A5 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		785D1BF721C7A85600BE97A5 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		785D1BF921C7A85600BE97A5 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		787B91CD221C0B1F002ED6C6 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		789443AC225E780D00072D14 /* CollectionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CollectionKit.framework; path = Carthage/Build/iOS/CollectionKit.framework; sourceTree = "<group>"; };
+		789443AD225E780D00072D14 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		789443B0225E785000072D14 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/tvOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		789443B2225E786100072D14 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/watchOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		789443B8225E7A7700072D14 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		789443BA225E7A8500072D14 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/tvOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		789443BC225E7A9200072D14 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/watchOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		78A0F625225D0989008FD8CE /* UIVIew+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+AddSubviews.swift"; sourceTree = "<group>"; };
 		78DECB2C225E019A00BD975F /* BasePassCodeEnterFlowCoordinator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasePassCodeEnterFlowCoordinator+Extensions.swift"; sourceTree = "<group>"; };
 		78DECB2E225E020900BD975F /* BasePassCodeCreateFlowCoordinator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasePassCodeCreateFlowCoordinator+Extensions.swift"; sourceTree = "<group>"; };
 		78DECB30225E026B00BD975F /* BasePassCodeChangeFlowCoordinator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasePassCodeChangeFlowCoordinator+Extensions.swift"; sourceTree = "<group>"; };
 		78DECB32225E2EA300BD975F /* CustomPassCodeStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPassCodeStepsView.swift; sourceTree = "<group>"; };
-		A5C4B54560BF921F25154FB8 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		AAA55F69AC0C3804D6BC6225 /* libPods-UserAuthenticationKit-UserAuthenticationKit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UserAuthenticationKit-UserAuthenticationKit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE73A0B604A0DCB1F3D7AF60 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D07140210A83AC30C8C1E5DD /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		E513B23157659D65C7608BB1 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		E6D982AE4B42DE93E835AAC0 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		EE12693DF1EF6C791124E5A2 /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3F599E93F97DF9B45ADF5F8 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_110956838379 /* UserAuthenticationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserAuthenticationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_179098439141 /* UserAuthenticationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAuthenticationKit.h; sourceTree = "<group>"; };
 		FR_470909651611 /* UserAuthenticationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserAuthenticationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,7 +233,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96857981668A025120167146 /* libPods-UserAuthenticationKit-UserAuthenticationKit-iOS.a in Frameworks */,
+				789443B9225E7A7800072D14 /* CryptoSwift.framework in Frameworks */,
+				789443AE225E780D00072D14 /* CollectionKit.framework in Frameworks */,
+				789443AF225E780D00072D14 /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +243,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3ADA058802482ADEDCD3DE1 /* libPods-Example.a in Frameworks */,
+				789443BE225E7CD400072D14 /* CollectionKit.framework in Frameworks */,
+				789443BF225E7CD400072D14 /* CryptoSwift.framework in Frameworks */,
+				789443C0225E7CD400072D14 /* KeychainAccess.framework in Frameworks */,
+				789443B7225E78DE00072D14 /* UserAuthenticationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +254,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A80A69239A218CB0F247E1E /* libPods-UserAuthenticationKit-UserAuthenticationKit-watchOS.a in Frameworks */,
+				789443BD225E7A9200072D14 /* CryptoSwift.framework in Frameworks */,
+				789443B3225E786100072D14 /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,32 +263,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FAC58B14692D305D76BF465 /* libPods-UserAuthenticationKit-UserAuthenticationKit-tvOS.a in Frameworks */,
+				789443BB225E7A8500072D14 /* CryptoSwift.framework in Frameworks */,
+				789443B1225E785000072D14 /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		178B2A538D6ACC48840DCCCF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A5C4B54560BF921F25154FB8 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig */,
-				E513B23157659D65C7608BB1 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig */,
-				E6D982AE4B42DE93E835AAC0 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.debug.xcconfig */,
-				69C4C969762A38B6C010DEBC /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-Extension.release.xcconfig */,
-				BE73A0B604A0DCB1F3D7AF60 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig */,
-				3B17852098A26989412B3B68 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig */,
-				6D1E186A252D02F9C44F9705 /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig */,
-				D07140210A83AC30C8C1E5DD /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig */,
-				386D5D3968917283E937128F /* Pods-UserAuthenticationKit-Example.debug.xcconfig */,
-				075E57C2730897E7C136C5A0 /* Pods-UserAuthenticationKit-Example.release.xcconfig */,
-				36FEE59498DB10300E19708A /* Pods-Example.debug.xcconfig */,
-				263D7B65588B2599C800C9DA /* Pods-Example.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		672489EC21AFC0A3005DC8C7 /* BasePassCodeKeyboardView */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +644,20 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		789443AB225E780C00072D14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				789443B8225E7A7700072D14 /* CryptoSwift.framework */,
+				789443BA225E7A8500072D14 /* CryptoSwift.framework */,
+				789443BC225E7A9200072D14 /* CryptoSwift.framework */,
+				789443B0225E785000072D14 /* KeychainAccess.framework */,
+				789443B2225E786100072D14 /* KeychainAccess.framework */,
+				789443AC225E780D00072D14 /* CollectionKit.framework */,
+				789443AD225E780D00072D14 /* KeychainAccess.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78A0F624225D0968008FD8CE /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,28 +676,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7BD6DCF1E411E45C31C7EFFC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				787B91CD221C0B1F002ED6C6 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */,
-				F3F599E93F97DF9B45ADF5F8 /* Pods_UserAuthenticationKit_UserAuthenticationKit_iOS_Extension.framework */,
-				37D004BFF3C548AC1415D402 /* Pods_UserAuthenticationKit_Example.framework */,
-				EE12693DF1EF6C791124E5A2 /* libPods-Example.a */,
-				AAA55F69AC0C3804D6BC6225 /* libPods-UserAuthenticationKit-UserAuthenticationKit-iOS.a */,
-				59E9AD54B223E6B8625322A2 /* libPods-UserAuthenticationKit-UserAuthenticationKit-tvOS.a */,
-				35722C0371E704A46ECDA609 /* libPods-UserAuthenticationKit-UserAuthenticationKit-watchOS.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		G_1435969344797 = {
 			isa = PBXGroup;
 			children = (
 				G_3793602694552 /* Sources */,
 				785D1BD821C79F8B00BE97A5 /* Example */,
 				G_4611750103798 /* Products */,
-				178B2A538D6ACC48840DCCCF /* Pods */,
-				7BD6DCF1E411E45C31C7EFFC /* Frameworks */,
+				789443AB225E780C00072D14 /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -814,14 +806,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 785D1BE621C79F8C00BE97A5 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				D23AC218BAB3D9E6FA47ECB4 /* [CP] Check Pods Manifest.lock */,
 				785D1BD321C79F8B00BE97A5 /* Sources */,
 				785D1BD421C79F8B00BE97A5 /* Frameworks */,
 				785D1BD521C79F8B00BE97A5 /* Resources */,
+				71QM07D93EZKRANTB46E8NFC /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				789443B5225E787B00072D14 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -832,7 +825,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CL_110956838379 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-iOS" */;
 			buildPhases = (
-				6129AA3FBFC8AEE29D1A6B6A /* [CP] Check Pods Manifest.lock */,
 				HBP_11095683837 /* Headers */,
 				SBP_11095683837 /* Sources */,
 				SSBP_9199505650 /* Swiftlint */,
@@ -852,7 +844,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CL_470909651611 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-tvOS" */;
 			buildPhases = (
-				A6B36D653D8651873B3E4307 /* [CP] Check Pods Manifest.lock */,
 				HBP_47090965161 /* Headers */,
 				SBP_47090965161 /* Sources */,
 				SSBP_7315032155 /* Swiftlint */,
@@ -872,7 +863,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CL_856239965769 /* Build configuration list for PBXNativeTarget "UserAuthenticationKit-watchOS" */;
 			buildPhases = (
-				FF5ED2DBDFDFFC149FDC7F33 /* [CP] Check Pods Manifest.lock */,
 				HBP_85623996576 /* Headers */,
 				SBP_85623996576 /* Sources */,
 				SSBP_1962148793 /* Swiftlint */,
@@ -942,92 +932,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6129AA3FBFC8AEE29D1A6B6A /* [CP] Check Pods Manifest.lock */ = {
+		71QM07D93EZKRANTB46E8NFC /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/Example-inputPaths.xcfilelist",
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = Carthage;
 			outputFileListPaths = (
+				"$(SRCROOT)/Carthage/xcfilelists/Example-outputPaths.xcfilelist",
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UserAuthenticationKit-UserAuthenticationKit-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A6B36D653D8651873B3E4307 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D23AC218BAB3D9E6FA47ECB4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FF5ED2DBDFDFFC149FDC7F33 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 			showEnvVarsInLog = 0;
 		};
 		SSBP_1962148793 /* Swiftlint */ = {
@@ -1035,9 +958,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
 			name = Swiftlint;
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1049,9 +976,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
 			name = "CopyPaste Detection";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1063,9 +994,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
 			name = "CopyPaste Detection";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1077,9 +1012,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
 			name = "CopyPaste Detection";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1091,9 +1030,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
 			name = Swiftlint;
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1105,9 +1048,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
 			name = Swiftlint;
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1260,6 +1207,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		789443B5225E787B00072D14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = NT_110956838379 /* UserAuthenticationKit-iOS */;
+			targetProxy = 789443B4225E787B00072D14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		785D1BE221C79F8C00BE97A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1274,7 +1229,6 @@
 /* Begin XCBuildConfiguration section */
 		785D1BE721C79F8C00BE97A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36FEE59498DB10300E19708A /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1282,13 +1236,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = D4HA43V467;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.testapp;
@@ -1303,7 +1264,6 @@
 		};
 		785D1BE821C79F8C00BE97A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 263D7B65588B2599C800C9DA /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1311,9 +1271,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = D4HA43V467;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.testapp;
@@ -1327,7 +1294,6 @@
 		};
 		BC_294955451944 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D07140210A83AC30C8C1E5DD /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1335,6 +1301,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.UserAuthenticationKit;
@@ -1350,7 +1320,6 @@
 		};
 		BC_309557304354 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D1E186A252D02F9C44F9705 /* Pods-UserAuthenticationKit-UserAuthenticationKit-watchOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1358,6 +1327,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.UserAuthenticationKit;
@@ -1373,7 +1346,6 @@
 		};
 		BC_441506936932 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B17852098A26989412B3B68 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1381,9 +1353,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.UserAuthenticationKit;
 				PRODUCT_NAME = UserAuthenticationKit;
 				SDKROOT = appletvos;
@@ -1440,7 +1419,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -1450,7 +1430,6 @@
 		};
 		BC_545686856592 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E513B23157659D65C7608BB1 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1459,9 +1438,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Sources/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.UserAuthenticationKit;
 				PRODUCT_NAME = UserAuthenticationKit;
 				SDKROOT = iphoneos;
@@ -1474,7 +1460,6 @@
 		};
 		BC_724322140819 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE73A0B604A0DCB1F3D7AF60 /* Pods-UserAuthenticationKit-UserAuthenticationKit-tvOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1482,9 +1467,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.UserAuthenticationKit;
 				PRODUCT_NAME = UserAuthenticationKit;
 				SDKROOT = appletvos;
@@ -1559,7 +1551,6 @@
 		};
 		BC_870390609568 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5C4B54560BF921F25154FB8 /* Pods-UserAuthenticationKit-UserAuthenticationKit-iOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1568,9 +1559,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Sources/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.touchin.UserAuthenticationKit;
 				PRODUCT_NAME = UserAuthenticationKit;
 				SDKROOT = iphoneos;
