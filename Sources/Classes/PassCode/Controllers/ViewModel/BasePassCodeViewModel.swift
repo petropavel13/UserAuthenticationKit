@@ -90,6 +90,10 @@ public extension BasePassCodeViewModel {
         return flowCoordinator.currentStateTitle
     }
 
+    var remainingAttempts: UInt {
+        return flowCoordinator.remainingAttempts
+    }
+
     var canAuthenticateWithBiometrics: Bool {
         guard let biometricsFlowCoordinator = flowCoordinator as? PassCodeBiometricsFlowCoordinator else {
             return false
