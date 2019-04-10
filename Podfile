@@ -2,8 +2,6 @@ source 'https://github.com/CocoaPods/Specs'
 source 'https://github.com/TouchInstinct/Podspecs.git'
 
 abstract_target 'UserAuthenticationKit' do
-
-  use_frameworks!
   inhibit_all_warnings!
 
   # common pods
@@ -32,12 +30,12 @@ abstract_target 'UserAuthenticationKit' do
 
   end
 
-  # target 'Example' do
-  #   platform :ios, '8.0'
+end
 
-  #   pod "UserAuthenticationKit", :path => "UserAuthenticationKit.podspec"
+target 'Example' do
+  platform :ios, '9.0'
 
-  # end
+  pod "UserAuthenticationKit", :path => "UserAuthenticationKit.podspec"
 
 end
 

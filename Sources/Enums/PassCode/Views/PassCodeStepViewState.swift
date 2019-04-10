@@ -25,5 +25,4 @@ public enum PassCodeStepViewState: Hashable {
     case normal
     case filled
     case highlighted(isValid: Bool)
-
 }

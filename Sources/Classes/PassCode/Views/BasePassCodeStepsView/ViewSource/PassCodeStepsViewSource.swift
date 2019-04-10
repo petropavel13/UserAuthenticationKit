@@ -22,7 +22,7 @@
 
 import CollectionKit
 
-public final class PassCodeStepsViewSource<StepView: PassCodeStepView & UIView>: ViewSource<PassCodeStepViewState, StepView> {
+public final class PassCodeStepsViewSource<StepView: PassCodeStepView>: ViewSource<PassCodeStepViewState, StepView> {
 
     public typealias ViewConfiguratorClosure = (StepView) -> Void
 
@@ -39,5 +39,4 @@ public final class PassCodeStepsViewSource<StepView: PassCodeStepView & UIView>:
         viewConfiguratorClosure?(view)
         view.applyAppearance(for: data)
     }
-
 }

@@ -22,9 +22,9 @@
 
 import LocalAuthentication
 
+@available(tvOS 10.0, *)
 public protocol BiometricsService {
 
     /// Authentication context.
     var context: LAContext { get }
-
 }

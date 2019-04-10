@@ -22,17 +22,20 @@
 
 import LocalAuthentication
 
+@available(tvOS 10.0, *)
 public extension BiometricsService {
 
     typealias BiometricsAuthHandler = (Bool, Error?) -> Void
 
     /// Returns true if user can authenticate via FaceID.
     var isFaceIdSupported: Bool {
+        #if !(os(tvOS) || os(watchOS))
         if #available(iOS 11.0, *) {
             return canAuthenticateWithBiometrics && context.biometryType == .faceID
-        } else {
-            return false
         }
+        #endif
+
+        return false
     }
 
     /// Indicates is it possible to authenticate on this device via touch id.
@@ -59,5 +62,4 @@ public extension BiometricsService {
                                localizedReason: parameters.reason,
                                reply: authHandler)
     }
-
 }

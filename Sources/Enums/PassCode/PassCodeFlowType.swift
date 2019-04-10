@@ -20,10 +20,9 @@
 //  THE SOFTWARE.
 //
 
-public extension DefaultSettings {
-
-    enum PassCodeSettings {
-        public static let maxPassCodeEnterAttempts: UInt = 3
-        public static let passCodeLength: UInt = 4
-    }
+public enum PassCodeFlowType {
+    case enter
+    case change
+    case create
+    case custom(String)
 }

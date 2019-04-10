@@ -20,8 +20,6 @@
 //  THE SOFTWARE.
 //
 
-public protocol PassCodeStepView: UIViewRepresentable {
-
+public protocol PassCodeStepView: UIView {
     func applyAppearance(for state: PassCodeStepViewState)
-
 }

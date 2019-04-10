@@ -21,23 +21,28 @@
 //
 
 open class BasePassCodeChangeFlowCoordinator: PassCodeFlowCoordinator {
-
-    public var delegate: PassCodeFlowDelegate?
+    public weak var delegate: PassCodeFlowDelegate?
 
     open var initialState: PassCodeState {
-        return .enter(error: nil, inputState: [.current])
+        return .enter(error: nil)
     }
 
     public var currentStateTitle: String {
         switch (currentInputState.isNew, currentInputState.isRepeat) {
         case (false, _):
             return enterCurrentCodeTitle
+
         case (true, false):
             return enterNewCodeTitle
+
         case (true, true):
             return repeatEnterCodeTitle
         }
     }
+    
+    public private(set) var remainingAttempts: UInt
+
+    public let flowType: PassCodeFlowType = .change
 
     private var didEnterOldPassCode: Bool = false
 
@@ -50,7 +55,6 @@ open class BasePassCodeChangeFlowCoordinator: PassCodeFlowCoordinator {
     private let maxPassCodeEnterAttempts: UInt
     private let passCodeStorage: PassCodeStorage
 
-    private var attemptsRemaining: UInt
     private var firstPassCode: String?
 
     public init(enterCurrentCodeTitle: String,
@@ -64,7 +68,7 @@ open class BasePassCodeChangeFlowCoordinator: PassCodeFlowCoordinator {
         self.repeatEnterCodeTitle = repeatEnterCodeTitle
         self.maxPassCodeEnterAttempts = maxPassCodeEnterAttempts
         self.passCodeStorage = passCodeStorage
-        self.attemptsRemaining = maxPassCodeEnterAttempts
+        self.remainingAttempts = maxPassCodeEnterAttempts
     }
 
     open func startFlow() -> PassCodeState {
@@ -77,23 +81,23 @@ open class BasePassCodeChangeFlowCoordinator: PassCodeFlowCoordinator {
             if passCodeStorage.loadAndCompare(with: passCode) {
                 return onDidEnterCorrectCurrentCode()
             } else {
-                attemptsRemaining = attemptsRemaining - 1
+                remainingAttempts -= 1
 
-                guard attemptsRemaining > 0 else {
+                guard remainingAttempts > 0 else {
                     return onDidSpendLastTryToEnterCurrentCode()
                 }
 
                 return onDidEnterIncorrectCurrentPassCode()
             }
-        case (true, nil):
-            firstPassCode = passCode
 
-            return onDidEnterFirstPassCode()
+        case (true, nil):
+            return onDidEnter(firstPassCode: passCode)
+
         case let (true, firstPassCode?):
             if firstPassCode == passCode {
                 passCodeStorage.store(passCode: passCode)
 
-                return .finished(error: nil)
+                return .finished(error: nil, flowType: flowType)
             } else {
                 return onDidEnterIncorrectRepeatPassCode()
             }
@@ -107,26 +111,26 @@ open class BasePassCodeChangeFlowCoordinator: PassCodeFlowCoordinator {
     }
 
     open func onDidEnterCorrectCurrentCode() -> PassCodeState {
+        didEnterOldPassCode = true
         currentInputState = [.new]
-        return .enter(error: nil, inputState: currentInputState)
+        return .enter(error: nil)
     }
 
     open func onDidSpendLastTryToEnterCurrentCode() -> PassCodeState {
-        return .finished(error: .tooManyAttempts)
+        return .finished(error: .tooManyAttempts, flowType: flowType)
     }
 
     open func onDidEnterIncorrectCurrentPassCode() -> PassCodeState {
-        return .enter(error: .wrongCode(attemptsRemaining: attemptsRemaining),
-                      inputState: currentInputState)
+        return .enter(error: .wrongCode(attemptsRemaining: remainingAttempts))
     }
 
-    open func onDidEnterFirstPassCode() -> PassCodeState {
+    open func onDidEnter(firstPassCode: String) -> PassCodeState {
+        self.firstPassCode = firstPassCode
         currentInputState = [.new, .repeat]
-        return .enter(error: nil, inputState: currentInputState)
+        return .enter(error: nil)
     }
 
     open func onDidEnterIncorrectRepeatPassCode() -> PassCodeState {
-        return .enter(error: .codesNotMatch, inputState: currentInputState)
+        return .enter(error: .codesNotMatch)
     }
-
 }

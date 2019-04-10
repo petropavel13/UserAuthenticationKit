@@ -23,8 +23,6 @@
 import UIKit
 
 public protocol PassCodeButtonRepresentable {
-
     var title: String? { get }
     var image: UIImage? { get }
-
 }

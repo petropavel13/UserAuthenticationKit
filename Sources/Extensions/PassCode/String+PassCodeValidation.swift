@@ -69,7 +69,6 @@ private extension Substring.SubSequence {
             return orderingClosure(current, next)
         }
     }
-
 }
 
 private extension Character {
@@ -77,7 +76,6 @@ private extension Character {
     var int: Int? {
         return Int(String(self))
     }
-
 }
 
 extension String {
@@ -93,5 +91,4 @@ extension String {
     func containsDescendingSequence(minLength: UInt) -> Bool {
         return Substring(self).containsOrderedSequence(minLength: minLength) { $0 - 1 == $1 }
     }
-
 }

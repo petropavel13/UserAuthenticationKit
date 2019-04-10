@@ -23,8 +23,9 @@
 import UIKit
 
 open class BasePassCodeViewController<ViewModel: BasePassCodeViewModel>: UIViewController, PassCodeViewModelDelegate {
-
     public let viewModel: ViewModel
+
+    public var requestBiometricsAuthenticationOnDidAppear = true
 
     public init(viewModel: ViewModel) {
         self.viewModel = viewModel
@@ -40,6 +41,14 @@ open class BasePassCodeViewController<ViewModel: BasePassCodeViewModel>: UIViewC
     @available(*, unavailable)
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if requestBiometricsAuthenticationOnDidAppear && viewModel.canAuthenticateWithBiometrics {
+            viewModel.didRequestBiometricsAuthentication()
+        }
     }
 
     open func addViews() {
@@ -58,6 +67,14 @@ open class BasePassCodeViewController<ViewModel: BasePassCodeViewModel>: UIViewC
         // override in subclass
     }
 
+    open func onDidCompleteEnterPassCode() {
+        // override in subclass
+    }
+
+    open func onDidCompleFlow(flowType: PassCodeFlowType) {
+        // override in subclass
+    }
+
     // MARK: - PassCodeViewModelDelegate
 
     open func invalid(passCode: String, failedRules: [PassCodeValidationRule]) {
@@ -67,5 +84,4 @@ open class BasePassCodeViewController<ViewModel: BasePassCodeViewModel>: UIViewC
     open func transition(to state: PassCodeState) {
         // override in subclass
     }
-
 }

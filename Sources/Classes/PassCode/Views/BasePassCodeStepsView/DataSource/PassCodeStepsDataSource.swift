@@ -35,7 +35,6 @@ public final class PassCodeStepsDataSource: ArrayDataSource<PassCodeStepViewStat
     public func updateItemsState(newState: PassCodeStepViewState) {
         data = Array(repeating: newState, count: data.count)
     }
-
 }
 
 public extension PassCodeStepsDataSource {
@@ -43,5 +42,4 @@ public extension PassCodeStepsDataSource {
     convenience init(numberOfSteps: UInt) {
         self.init(initialStates: Array(repeating: .normal, count: numericCast(numberOfSteps)))
     }
-
 }

@@ -21,21 +21,32 @@
 //
 
 open class BasePassCodeCreateFlowCoordinator: PassCodeFlowCoordinator {
-
-    public var delegate: PassCodeFlowDelegate?
+    public weak var delegate: PassCodeFlowDelegate?
 
     open var initialState: PassCodeState {
-        return .enter(error: nil, inputState: [.new])
+        return .enter(error: nil)
     }
 
-    public let currentStateTitle: String
+    public var currentStateTitle: String {
+        return currentInputState.isRepeat ? repeatTitle : title
+    }
+
+    public let flowType: PassCodeFlowType = .create
+
+    public let remainingAttempts = UInt.max
+
+    private let title: String
+    private let repeatTitle: String
+
+    private var currentInputState: CodeInputState = .new
 
     private let passCodeStorage: PassCodeStorage
 
     private var firstPassCode: String?
 
-    public init(title: String, passCodeStorage: PassCodeStorage = BasePassCodeStorage()) {
-        self.currentStateTitle = title
+    public init(title: String, repeatTitle: String, passCodeStorage: PassCodeStorage = BasePassCodeStorage()) {
+        self.title = title
+        self.repeatTitle = repeatTitle
         self.passCodeStorage = passCodeStorage
     }
 
@@ -48,7 +59,7 @@ open class BasePassCodeCreateFlowCoordinator: PassCodeFlowCoordinator {
             if firstPassCode == passCode {
                 passCodeStorage.store(passCode: passCode)
 
-                return .finished(error: nil)
+                return .finished(error: nil, flowType: flowType)
             } else {
                 return onDidEnterIncorrectSecondPassCode()
             }
@@ -64,11 +75,13 @@ open class BasePassCodeCreateFlowCoordinator: PassCodeFlowCoordinator {
     }
 
     open func onDidEnterIncorrectSecondPassCode() -> PassCodeState {
-        return .enter(error: .codesNotMatch, inputState: [.new])
+        currentInputState = [.new]
+        firstPassCode = nil
+        return .enter(error: .codesNotMatch)
     }
 
     open func onDidEnterFirstPassCode() -> PassCodeState {
-        return .enter(error: nil, inputState: [.new, .repeat])
+        currentInputState = [.new, .repeat]
+        return .enter(error: nil)
     }
-
 }

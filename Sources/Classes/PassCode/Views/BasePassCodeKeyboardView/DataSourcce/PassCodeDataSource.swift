@@ -62,7 +62,6 @@ public final class PassCodeDataSource: ArrayDataSource<PassCodeButtonItem> {
 
         super.init(data: .oneToNineDigits + lastRowItems.compactMap { $0 })
     }
-
 }
 
 public extension PassCodeDataSource {
@@ -94,7 +93,6 @@ public extension PassCodeDataSource {
 
         data = dataCopy
     }
-
 }
 
 private extension Int {
@@ -102,21 +100,21 @@ private extension Int {
     static let numberOfRows = 4
     static let numberOfItemsInRow = 3
     static let leadingButtonItemIndex = .numberOfItemsInRow * (.numberOfRows - 1)
-
 }
 
 private extension Array where Element == PassCodeButtonItem {
 
     static var oneToNineDigits: [Element] {
-        return [.digit(1),
-                .digit(2),
-                .digit(3),
-                .digit(4),
-                .digit(5),
-                .digit(6),
-                .digit(7),
-                .digit(8),
-                .digit(9)]
+        return [
+            .digit(1),
+            .digit(2),
+            .digit(3),
+            .digit(4),
+            .digit(5),
+            .digit(6),
+            .digit(7),
+            .digit(8),
+            .digit(9)
+        ]
     }
-
 }

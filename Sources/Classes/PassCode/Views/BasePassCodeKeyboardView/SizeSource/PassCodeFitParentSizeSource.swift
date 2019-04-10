@@ -54,7 +54,19 @@ public final class PassCodeFitParentSizeSource: SizeSource<PassCodeButtonItem> {
 
         let itemDimesion = min(itemWidth, itemHeight)
 
+        let itemsInRowWithItemDimension = collectionSize.width / (itemDimesion + interitemSpacing)
+        let rowsInColumnWithItemDimension = collectionSize.height / (itemDimesion + lineSpacing)
+
+        if itemsInRowWithItemDimension > itemsInRow {
+            // number of items in row limit exceeded
+            // return initially calculated itemWidth, breaking height limit
+            return CGSize(width: itemWidth, height: itemWidth)
+        } else if rowsInColumnWithItemDimension > rowsInColumn {
+            // number of rows in column limit exceeded
+            // return initially calculated itemHeight, breaking width limit
+            return CGSize(width: itemHeight, height: itemHeight)
+        }
+
         return CGSize(width: itemDimesion, height: itemDimesion)
     }
-
 }

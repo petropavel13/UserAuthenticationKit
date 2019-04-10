@@ -25,5 +25,4 @@ public protocol PassCodeValidator {
     init(validationRules: [PassCodeValidationRule])
 
     func validate(passCode: String) -> [PassCodeValidationRule]
-
 }

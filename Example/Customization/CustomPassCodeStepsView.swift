@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 Touch Instinct
+//  Copyright (c) 2019 Touch Instinct
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the Software), to deal
@@ -21,12 +21,15 @@
 //
 
 import UserAuthenticationKit
+import CollectionKit
 
-final class ViewController: BasePassCodeKeyboardViewController<ViewModel> {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+final class CustomPassCodeStepsView: BasePassCodeStepsView {
+    override public func createViewSource() -> ViewSource<PassCodeStepViewState, BasePassCodeDotView> {
+        return PassCodeStepsViewSource {
+            $0.set(appearance: .defaultNormalAppearance, for: .normal)
+            $0.set(appearance: .defaultFilledAppearance, for: .filled)
+            $0.set(appearance: .defaultFilledAppearance, for: .highlighted(isValid: false))
+            $0.set(appearance: .defaultFilledAppearance, for: .highlighted(isValid: true))
+        }
     }
-
 }
-

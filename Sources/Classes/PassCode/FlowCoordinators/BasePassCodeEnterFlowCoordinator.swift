@@ -20,8 +20,8 @@
 //  THE SOFTWARE.
 //
 
+@available(tvOS 10.0, *)
 open class BasePassCodeEnterFlowCoordinator: PassCodeBiometricsFlowCoordinator {
-
     private let authenticationParameters: BiometricsAuthenticationParameters
     private let maxPassCodeEnterAttempts: UInt
     private let biometricsService: BiometricsService
@@ -30,12 +30,14 @@ open class BasePassCodeEnterFlowCoordinator: PassCodeBiometricsFlowCoordinator {
     public weak var delegate: PassCodeFlowDelegate?
 
     open var initialState: PassCodeState {
-        return .enter(error: nil, inputState: [.current])
+        return .enter(error: nil)
     }
 
     public let currentStateTitle: String
 
-    private var attemptsRemaining: UInt
+    public private(set) var remainingAttempts: UInt
+
+    public let flowType: PassCodeFlowType = .enter
 
     public init(authenticationParameters: BiometricsAuthenticationParameters,
                 title: String,
@@ -53,7 +55,7 @@ open class BasePassCodeEnterFlowCoordinator: PassCodeBiometricsFlowCoordinator {
         self.biometricsService = biometricsService
         self.passCodeStorage = passCodeStorage
 
-        self.attemptsRemaining = maxPassCodeEnterAttempts
+        self.remainingAttempts = maxPassCodeEnterAttempts
     }
 
     open func startFlow() -> PassCodeState {
@@ -62,11 +64,11 @@ open class BasePassCodeEnterFlowCoordinator: PassCodeBiometricsFlowCoordinator {
 
     open func didFinishEnter(passCode: String) -> PassCodeState {
         if passCodeStorage.loadAndCompare(with: passCode) {
-            return .finished(error: nil)
+            return .finished(error: nil, flowType: flowType)
         } else {
-            attemptsRemaining = attemptsRemaining - 1
+            remainingAttempts -= 1
 
-            guard attemptsRemaining > 0 else {
+            guard remainingAttempts > 0 else {
                 return onDidSpendLastTryToEnterCurrentCode()
             }
 
@@ -75,28 +77,38 @@ open class BasePassCodeEnterFlowCoordinator: PassCodeBiometricsFlowCoordinator {
     }
 
     open func reset() -> PassCodeState {
-        attemptsRemaining = maxPassCodeEnterAttempts
+        remainingAttempts = maxPassCodeEnterAttempts
         return initialState
     }
 
     // MARK: - PassCodeBiometricsFlowCoordinator
 
+    open var canAuthenticateWithBiometrics: Bool {
+        return biometricsService.canAuthenticateWithBiometrics
+    }
+
     open func authenticateUsingBiometrics() -> PassCodeState {
         if biometricsService.canAuthenticateWithBiometrics {
             biometricsService.authenticateWithBiometrics(with: authenticationParameters) { [weak self] success, error in
-                guard let self = self else {
-                    return
-                }
-
-                if success {
-                    self.delegate?.flowDidTransition(to: .finished(error: nil))
-                } else {
-                    self.delegate?.flowDidTransition(to: self.onDidFailedAuthenticateUsingBiometrics())
+                DispatchQueue.main.async {
+                    self?.onDidFinishAuthenticaWithBiometrics(success: success, error: error)
                 }
             }
         }
 
-        return .enter(error: nil, inputState: [.current, .biometrics])
+        return .enter(error: nil)
+    }
+
+    open func onDidFinishAuthenticaWithBiometrics(success: Bool, error: Error?) {
+        let newState: PassCodeState
+
+        if success {
+            newState = .finished(error: nil, flowType: self.flowType)
+        } else {
+            newState = onDidFailedAuthenticateUsingBiometrics()
+        }
+
+        delegate?.flowDidTransition(to: newState)
     }
 
     open func onDidFailedAuthenticateUsingBiometrics() -> PassCodeState {
@@ -104,12 +116,10 @@ open class BasePassCodeEnterFlowCoordinator: PassCodeBiometricsFlowCoordinator {
     }
 
     open func onDidSpendLastTryToEnterCurrentCode() -> PassCodeState {
-        return .finished(error: .tooManyAttempts)
+        return .finished(error: .tooManyAttempts, flowType: flowType)
     }
 
     open func onDidEnterIncorrectCurrentPassCode() -> PassCodeState {
-        return .enter(error: .wrongCode(attemptsRemaining: attemptsRemaining),
-                      inputState: [.current])
+        return .enter(error: .wrongCode(attemptsRemaining: remainingAttempts))
     }
-
 }

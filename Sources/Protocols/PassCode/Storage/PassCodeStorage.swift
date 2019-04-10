@@ -27,5 +27,4 @@ public protocol PassCodeStorage {
     func store(passCode: String)
     func loadAndCompare(with passCode: String) -> Bool
     func clear()
-
 }

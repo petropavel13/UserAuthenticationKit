@@ -20,14 +20,13 @@
 //  THE SOFTWARE.
 //
 
+import Foundation
+
 private extension String {
-
     static let hasSavedPassCodeKey = "UserAuthenticationKit.hasSavedPassCodeKey"
-
 }
 
 open class BasePassCodeStorage: PassCodeStorage {
-
     private let appInstallStorage: UserDefaults
     private let securePassCodeStorage: PassCodeStorage
 
@@ -44,6 +43,7 @@ open class BasePassCodeStorage: PassCodeStorage {
 
     open func store(passCode: String) {
         securePassCodeStorage.store(passCode: passCode)
+        appInstallStorage.set(true, forKey: .hasSavedPassCodeKey)
     }
 
     open func loadAndCompare(with passCode: String) -> Bool {
@@ -54,5 +54,4 @@ open class BasePassCodeStorage: PassCodeStorage {
         appInstallStorage.set(false, forKey: .hasSavedPassCodeKey)
         securePassCodeStorage.clear()
     }
-
 }

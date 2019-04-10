@@ -21,6 +21,7 @@
 //
 
 import UIKit
+import UserAuthenticationKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,25 +31,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        window?.rootViewController = ViewController(viewModel: ViewModel())
+        let hasPasscode = BasePassCodeStorage().hasPasscode
+
+        let flowCoordinator: PassCodeFlowCoordinator
+
+        if hasPasscode {
+            flowCoordinator = BasePassCodeEnterFlowCoordinator()
+        } else {
+            flowCoordinator = BasePassCodeCreateFlowCoordinator()
+        }
+
+        let viewModel = PassCodeViewModel(flowCoordinator: flowCoordinator)
+
+        let passCodeController = PassCodeViewController(viewModel: viewModel)
+
+        window = UIWindow()
+        window?.rootViewController = passCodeController
+        window?.makeKeyAndVisible()
 
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-    }
-
 }
+
+
 

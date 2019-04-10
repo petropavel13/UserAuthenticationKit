@@ -26,5 +26,4 @@ public protocol PassCodeValidationRule {
     var errorMessage: String? { get }
 
     func validate(passCode: String) -> Bool
-
 }

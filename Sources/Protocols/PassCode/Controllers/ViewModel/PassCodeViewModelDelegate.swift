@@ -24,6 +24,4 @@ public protocol PassCodeViewModelDelegate: class {
 
     func invalid(passCode: String, failedRules: [PassCodeValidationRule])
     func transition(to state: PassCodeState)
-
 }
-

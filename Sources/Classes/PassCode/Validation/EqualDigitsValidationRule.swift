@@ -36,5 +36,4 @@ public final class EqualDigitsValidationRule: PassCodeValidationRule {
     public func validate(passCode: String) -> Bool {
         return !passCode.containsSequenceOfEqualCharacters(minEqualCharacters: minEqualDigits)
     }
-
 }

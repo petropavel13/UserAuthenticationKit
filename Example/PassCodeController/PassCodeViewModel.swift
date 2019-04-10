@@ -22,22 +22,22 @@
 
 import UserAuthenticationKit
 
-final class ViewModel: BasePassCodeViewModel {
+final class PassCodeViewModel: BasePassCodeViewModel {
 
-    init() {
-        let equalDigitsRule = EqualDigitsValidationRule(minEqualDigits: 2,
-                                                        errorTitle: nil,
-                                                        errorMessage: nil)
+    init(flowCoordinator: PassCodeFlowCoordinator) {
+        let equalDigitsRule = EqualDigitsValidationRule(minEqualDigits: 3,
+                                                        errorTitle: "Invalid pass code",
+                                                        errorMessage: "PIN not to include 3 same digits in a row")
 
         let ascendingDigitsRule = OrderedDigitsValidationRule(ascendingSequence: true,
                                                               minLength: 3,
-                                                              errorTitle: nil,
-                                                              errorMessage: nil)
+                                                              errorTitle: "Invalid pass code",
+                                                              errorMessage: "PIN not to include ascending digits")
 
         let descendingDigitsRule = OrderedDigitsValidationRule(ascendingSequence: false,
                                                                minLength: 3,
-                                                               errorTitle: nil,
-                                                               errorMessage: nil)
+                                                               errorTitle: "Invalid pass code",
+                                                               errorMessage: "PIN not to include descending digits")
 
         let rules: [PassCodeValidationRule] = [equalDigitsRule,
                                                ascendingDigitsRule,
@@ -45,9 +45,14 @@ final class ViewModel: BasePassCodeViewModel {
 
         let validator = BasePassCodeValidator(validationRules: rules)
 
-        let enterCoordinator = BasePassCodeEnterFlowCoordinator(authenticationParameters: BiometricsAuthenticationParameters(reason: ""),
-                                                                title: "Enter pass code")
+        super.init(flowCoordinator: flowCoordinator, inputValidator: validator)
+    }
 
-        super.init(flowCoordinator: enterCoordinator, inputValidator: validator)
+    func onForgotPassword() {
+        // handle forgot password
+    }
+
+    func logout() {
+        resetStoredPassCode()
     }
 }

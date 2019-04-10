@@ -20,8 +20,7 @@
 //  THE SOFTWARE.
 //
 
-public protocol PassCodeStepsView: UIViewRepresentable {
-
+public protocol PassCodeStepsView: UIView {
     func stepForward()
     func stepBackward()
 
@@ -30,5 +29,4 @@ public protocol PassCodeStepsView: UIViewRepresentable {
                              completion: (() -> Void)?)
 
     func resetState()
-
 }

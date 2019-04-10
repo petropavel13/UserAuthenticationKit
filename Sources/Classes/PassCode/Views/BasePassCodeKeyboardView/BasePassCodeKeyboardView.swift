@@ -57,7 +57,6 @@ open class BasePassCodeKeyboardView: CollectionView, UIGestureRecognizerDelegate
 
         return false
     }
-
 }
 
 private extension BasePassCodeKeyboardView {

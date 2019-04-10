@@ -30,7 +30,6 @@ public struct BiometricsAuthenticationParameters {
 
     /// Cancel button title on the system alert.
     let cancelTitle: String?
-
 }
 
 public extension BiometricsAuthenticationParameters {
@@ -38,5 +37,4 @@ public extension BiometricsAuthenticationParameters {
     init(reason: String, cancelTitle: String? = nil, fallbackTitle: String? = nil) {
         self.init(reason: reason, fallbackTitle: fallbackTitle, cancelTitle: cancelTitle)
     }
-
 }

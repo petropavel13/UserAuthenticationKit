@@ -62,7 +62,6 @@ open class BasePulsePassCodeButton: BasePassCodeButton {
 
         configureBase(appearance: baseAppearance(for: state))
     }
-
 }
 
 private extension BasePulsePassCodeButton {
@@ -81,5 +80,4 @@ private extension BasePulsePassCodeButton {
         layer.add(colorAnimation, forKey: "ColorPulse")
         CATransaction.commit()
     }
-
 }

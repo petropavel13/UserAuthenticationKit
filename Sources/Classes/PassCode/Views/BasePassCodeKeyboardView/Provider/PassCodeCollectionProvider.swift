@@ -42,23 +42,22 @@ public final class PassCodeCollectionProvider: BasicProvider<PassCodeButtonItem,
                    animator: animator,
                    tapHandler: tapHandler)
     }
-
 }
 
 public extension DefaultAppearance {
 
-    public struct PassCodeCollectionProvider {
+    enum PassCodeCollectionProvider {
+        /// 10pt
         public static let lineSpacing: CGFloat = 10
+        /// 10pt
         public static let interitemSpacing: CGFloat = 10
     }
-
 }
 
 private extension CGFloat {
 
     static let defaultLineSpacing = DefaultAppearance.PassCodeCollectionProvider.lineSpacing
     static let defaultInteritemSpacing = DefaultAppearance.PassCodeCollectionProvider.interitemSpacing
-
 }
 
 public extension PassCodeFitParentSizeSource {
@@ -67,7 +66,6 @@ public extension PassCodeFitParentSizeSource {
         return PassCodeFitParentSizeSource(lineSpacing: .defaultLineSpacing,
                                            interitemSpacing: .defaultInteritemSpacing)
     }
-
 }
 
 public extension Layout {
@@ -95,5 +93,4 @@ public extension Layout {
                           alignItems: .center,
                           alignContent: .center)
     }
-
 }

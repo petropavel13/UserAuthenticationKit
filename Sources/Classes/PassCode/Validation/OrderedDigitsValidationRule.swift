@@ -40,5 +40,4 @@ public final class OrderedDigitsValidationRule: PassCodeValidationRule {
             ? !passCode.containsAscendingSequence(minLength: minLength)
             : !passCode.containsDescendingSequence(minLength: minLength)
     }
-
 }

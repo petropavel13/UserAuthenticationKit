@@ -90,29 +90,29 @@ open class BasePassCodeStepsView: CollectionView, PassCodeStepsView {
         dataSource.updateItemsState(newState: .normal)
     }
 
-    open func createProvider() -> Provider & LayoutSettableProvider {
-        let stepViewConfiguratorClosure: (BasePassCodeDotView) -> Void = {
+    open func createViewSource() -> ViewSource<PassCodeStepViewState, BasePassCodeDotView> {
+        return PassCodeStepsViewSource {
             $0.set(appearance: .defaultNormalAppearance, for: .normal)
             $0.set(appearance: .defaultFilledAppearance, for: .filled)
             $0.set(appearance: .defaultInvalidHighlightedAppearance, for: .highlighted(isValid: false))
             $0.set(appearance: .defaultValidHighlightedAppearance, for: .highlighted(isValid: true))
         }
+    }
 
-        let viewSource = PassCodeStepsViewSource(viewConfiguratorClosure: stepViewConfiguratorClosure)
-
+    open func createProvider() -> Provider & LayoutSettableProvider {
         return PassCodeStepsCollectionProvider(dataSource: dataSource,
-                                               viewSource: viewSource)
+                                               viewSource: createViewSource())
     }
 
     open func configureBase(appearance: BaseAppearance) {
         guard let layoutableProvider = provider as? LayoutSettableProvider else {
-            assertionFailure("Attempt to configure \(BasePassCodeStepsView.self) whose provider doesn't implement \(LayoutSettableProvider.self)!")
+            assertionFailure("Attempt to configure \(BasePassCodeStepsView.self)"
+                + " whose provider doesn't implement \(LayoutSettableProvider.self)!")
             return
         }
 
         layoutableProvider.layout = appearance.collectionLayout
     }
-
 }
 
 private extension UIView {
@@ -127,7 +127,6 @@ private extension UIView {
         layer.add(animation, forKey: "shake")
         CATransaction.commit()
     }
-
 }
 
 public extension BasePassCodeDotView.BaseAppearance {
@@ -155,7 +154,6 @@ public extension BasePassCodeDotView.BaseAppearance {
                                                   borderColor: .clear,
                                                   borderWidth: 0)
     }
-
 }
 
 extension BasePassCodeStepsView {
@@ -171,5 +169,4 @@ extension BasePassCodeStepsView {
             return .defaultPassCodeStepsLayout(interitemSpacing: interitemSpacing)
         }
     }
-
 }

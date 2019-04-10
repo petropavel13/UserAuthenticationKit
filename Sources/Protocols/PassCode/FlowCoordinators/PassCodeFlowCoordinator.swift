@@ -21,19 +21,20 @@
 //
 
 public protocol PassCodeFlowCoordinator: class {
-
     var delegate: PassCodeFlowDelegate? { get set }
 
     var currentStateTitle: String { get }
+    var remainingAttempts: UInt { get }
+    
+    var flowType: PassCodeFlowType { get }
 
     func startFlow() -> PassCodeState
     func didFinishEnter(passCode: String) -> PassCodeState
     func reset() -> PassCodeState
-
 }
 
 public protocol PassCodeBiometricsFlowCoordinator: PassCodeFlowCoordinator {
+    var canAuthenticateWithBiometrics: Bool { get }
 
     func authenticateUsingBiometrics() -> PassCodeState
-
 }

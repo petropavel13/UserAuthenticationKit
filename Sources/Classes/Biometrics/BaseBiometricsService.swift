@@ -23,8 +23,10 @@
 import LocalAuthentication
 
 /// Service that provide access to authentication via biometric.
+@available(tvOS 10.0, *)
 open class BaseBiometricsService: LAContext {
 
+    #if os(iOS)
     /// The current state of the evaluated policy domain.
     @available(iOS 9.0, *)
     override open var evaluatedPolicyDomainState: Data? {
@@ -32,5 +34,5 @@ open class BaseBiometricsService: LAContext {
         _ = canAuthenticateWithBiometrics
         return super.evaluatedPolicyDomainState
     }
-
+    #endif
 }

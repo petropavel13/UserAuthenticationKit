@@ -21,7 +21,5 @@
 //
 
 public protocol PassCodeFlowDelegate: class {
-
     func flowDidTransition(to state: PassCodeState)
-
 }

@@ -76,24 +76,23 @@ open class BasePassCodeButton: UIButton {
 
         layer.cornerRadius = bounds.width / 2
     }
-
 }
 
 extension BasePassCodeButton {
 
     open class BaseAppearance {
-        let titleFont: UIFont
-        let titleColor: UIColor
-        let backgroundColor: UIColor
-        let borderColor: UIColor
-        let borderWidth: CGFloat
+        public let titleFont: UIFont
+        public let titleColor: UIColor
+        public let backgroundColor: UIColor
+        public let borderColor: UIColor
+        public let borderWidth: CGFloat
 
-        init(titleFont: UIFont = .systemFont(ofSize: 36),
-             titleColor: UIColor = .black,
-             backgroundColor: UIColor = .clear,
-             borderColor: UIColor = .white,
-             borderWidth: CGFloat = 1) {
-
+        public init(titleFont: UIFont = .systemFont(ofSize: 36),
+                    titleColor: UIColor = .black,
+                    backgroundColor: UIColor = .clear,
+                    borderColor: UIColor = .white,
+                    borderWidth: CGFloat = 1) {
+            
             self.titleFont = titleFont
             self.titleColor = titleColor
             self.backgroundColor = backgroundColor
@@ -113,7 +112,6 @@ extension BasePassCodeButton {
     func baseAppearance(for state: UIControl.State, default: BaseAppearance = BaseAppearance()) -> BaseAppearance {
         return appearanceForState[state] ?? appearanceForState[.normal] ?? `default`
     }
-
 }
 
 public extension BasePassCodeButton.BaseAppearance {
@@ -148,7 +146,6 @@ public extension BasePassCodeButton.BaseAppearance {
     func update(updateClosure: (BasePassCodeButton.BaseAppearance) -> BasePassCodeButton.BaseAppearance) -> BasePassCodeButton.BaseAppearance {
         return updateClosure(self)
     }
-
 }
 
 private extension BasePassCodeButton {
@@ -166,5 +163,4 @@ private extension BasePassCodeButton {
     @objc func unhighlightEvent() {
         applyAppearance(for: .normal)
     }
-
 }

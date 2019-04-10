@@ -26,11 +26,9 @@ import CryptoSwift
 private extension String {
 
     static let passCodeHashKey = "UserAuthenticationKit.passCodeHashKey"
-
 }
 
 open class BaseKeychainPassCodeStorage: PassCodeStorage {
-
     private let keychain: Keychain
 
     public init(keychainServiceString: String) {
@@ -56,13 +54,10 @@ open class BaseKeychainPassCodeStorage: PassCodeStorage {
     open func hash(of passCode: String) -> String {
         return passCode.sha256()
     }
-
 }
 
 public extension BaseKeychainPassCodeStorage {
-
     convenience init(bundle: Bundle = .main) {
         self.init(keychainServiceString: bundle.bundleIdentifier ?? "")
     }
-
 }

@@ -22,8 +22,7 @@
 
 import CollectionKit
 
-public final class PassCodeStepsCollectionProvider<StepView: PassCodeStepView & UIView>: BasicProvider<PassCodeStepViewState, StepView> {
-
+public final class PassCodeStepsCollectionProvider<StepView: PassCodeStepView>: BasicProvider<PassCodeStepViewState, StepView> {
     public typealias ViewSourceType = ViewSource<PassCodeStepViewState, StepView>
     public typealias DataSourceType = DataSource<PassCodeStepViewState>
     public typealias SizeSourceType = SizeSource<PassCodeStepViewState>
@@ -40,42 +39,35 @@ public final class PassCodeStepsCollectionProvider<StepView: PassCodeStepView & 
                    layout: layout,
                    animator: animator)
     }
-
 }
 
 public extension DefaultAppearance {
-
-    public struct PassCodeStepsCollectionProvider {
+    enum PassCodeStepsCollectionProvider {
         public static let itemSize: CGFloat = 12
         public static let interitemSpacing: CGFloat = 24
     }
-
 }
 
 private extension CGFloat {
-
     static let itemSize = DefaultAppearance.PassCodeStepsCollectionProvider.itemSize
-
 }
 
 public extension SizeSource where Data == PassCodeStepViewState {
-
     static var defaultPassCodeItemSizeSource: SizeSource<Data> {
-        return ClosureSizeSource { (_, _, _) in
-            return CGSize(width: .itemSize, height: .itemSize)
+        return ClosureSizeSource { _, _, _ in
+            CGSize(width: .itemSize, height: .itemSize)
         }
     }
-
 }
 
 public extension Layout {
-
-    static func defaultPassCodeStepsLayout(interitemSpacing: CGFloat = DefaultAppearance.PassCodeStepsCollectionProvider.interitemSpacing) -> Layout {
+    static func defaultPassCodeStepsLayout(interitemSpacing: CGFloat = DefaultAppearance
+        .PassCodeStepsCollectionProvider
+        .interitemSpacing) -> Layout {
         return FlowLayout(lineSpacing: 0,
                           interitemSpacing: interitemSpacing,
                           justifyContent: .center,
                           alignItems: .center,
                           alignContent: .center)
     }
-
 }

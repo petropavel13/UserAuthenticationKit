@@ -21,26 +21,30 @@
 //
 
 public struct CodeInputState: OptionSet {
-
     public let rawValue: Int
 
     /// Typing currently used pass code (login or change flow)
-    static let current = CodeInputState(rawValue: 1 << 0)
+    static let current = CodeInputState(uncheckedRawValue: 1 << 0)
 
     /// Typing new pass code (create or change flow)
-    static let new = CodeInputState(rawValue: 1 << 1)
+    static let new = CodeInputState(uncheckedRawValue: 1 << 1)
 
     /// Typing new or current pass code again (any flow)
-    static let `repeat` = CodeInputState(rawValue: 1 << 2)
+    static let `repeat` = CodeInputState(uncheckedRawValue: 1 << 2)
 
     /// Presenting biometrics authentication
-    static let biometrics = CodeInputState(rawValue: 1 << 3)
+    static let biometrics = CodeInputState(uncheckedRawValue: 1 << 3)
 
     private static let valuesRange = CodeInputState.current.rawValue...CodeInputState.biometrics.rawValue
 
     public init(rawValue: Int) {
-        precondition(CodeInputState.valuesRange ~= rawValue)
+        // Swift (?) bug. called from contains method with rawValue = 0
+//        precondition(CodeInputState.valuesRange ~= rawValue)
         self.rawValue = rawValue
+    }
+
+    private init(uncheckedRawValue: Int) {
+        self.rawValue = uncheckedRawValue
     }
 
     var isCurrent: Bool {
@@ -58,25 +62,21 @@ public struct CodeInputState: OptionSet {
     var isBiometrics: Bool {
         return contains(.biometrics)
     }
-
 }
 
 public enum PassCodeState {
-
-    case enter(error: PassCodeFlowError?, inputState: CodeInputState)
-    case finished(error: PassCodeFlowError?)
-
+    case enter(error: PassCodeFlowError?)
+    case finished(error: PassCodeFlowError?, flowType: PassCodeFlowType)
 }
 
 public extension PassCodeState {
-
     var flowError: PassCodeFlowError? {
         switch self {
-        case let .enter(error, _):
+        case let .enter(error):
             return error
-        case let .finished(error):
+
+        case let .finished(error, _):
             return error
         }
     }
-
 }

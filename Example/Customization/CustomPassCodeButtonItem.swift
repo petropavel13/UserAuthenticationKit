@@ -20,13 +20,24 @@
 //  THE SOFTWARE.
 //
 
-import UIKit.UIView
+import UserAuthenticationKit
 
-public protocol UIViewRepresentable /* where Self: UIView */ {
+enum CustomPassCodeButtonItem {
+    case forgotPassword
+    case logout
+}
 
-    /// Workaround to solve compiler error
-    /// Cannot convert value of type 'PassCodeStepView' to expected argument type 'UIView'
-    /// Fixed in Swift 5
-    var view: UIView { get }
+extension CustomPassCodeButtonItem: PassCodeButtonRepresentable {
+    var title: String? {
+        switch self {
+        case .forgotPassword:
+            return "Forgot password?"
+        case .logout:
+            return "Exit"
+        }
+    }
 
+    var image: UIImage? {
+        return nil
+    }
 }

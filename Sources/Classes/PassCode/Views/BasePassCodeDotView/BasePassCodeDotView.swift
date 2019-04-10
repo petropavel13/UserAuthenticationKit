@@ -31,7 +31,6 @@ open class BasePassCodeDotView: UIView {
 
         layer.cornerRadius = min(bounds.width, bounds.height) / 2
     }
-
 }
 
 extension BasePassCodeDotView: PassCodeStepView {
@@ -47,7 +46,6 @@ extension BasePassCodeDotView: PassCodeStepView {
 
         configureBase(appearance: appearance)
     }
-
 }
 
 extension BasePassCodeDotView {
@@ -66,19 +64,17 @@ extension BasePassCodeDotView {
             self.borderColor = borderColor
             self.borderWidth = borderWidth
         }
-
     }
 
-    func configureBase(appearance: BaseAppearance) {
+    public func configureBase(appearance: BaseAppearance) {
         layer.backgroundColor = appearance.fillColor.cgColor
         layer.borderWidth = appearance.borderWidth
         layer.borderColor = appearance.borderColor.cgColor
     }
 
-    func set(appearance: BaseAppearance, for state: PassCodeStepViewState) {
+    public func set(appearance: BaseAppearance, for state: PassCodeStepViewState) {
         appearanceForState[state] = appearance
     }
-
 }
 
 public extension BasePassCodeDotView.BaseAppearance {
@@ -91,9 +87,4 @@ public extension BasePassCodeDotView.BaseAppearance {
                                                   borderColor: borderColor ?? self.borderColor,
                                                   borderWidth: borderWidth ?? self.borderWidth)
     }
-
-    func update(updateClosure: (BasePassCodeDotView.BaseAppearance) -> BasePassCodeDotView.BaseAppearance) -> BasePassCodeDotView.BaseAppearance {
-        return updateClosure(self)
-    }
-
 }

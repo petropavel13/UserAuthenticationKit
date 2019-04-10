@@ -52,11 +52,12 @@ open class BasePassCodeViewSource: ViewSource<PassCodeButtonItem, BasePassCodeBu
         switch state {
         case .normal:
             return .defaultDigitAppearance
+
         case .highlighted:
             return .defaultPressedDigitAppearance
+
         default:
             return .defaultDigitAppearance
         }
     }
-
 }

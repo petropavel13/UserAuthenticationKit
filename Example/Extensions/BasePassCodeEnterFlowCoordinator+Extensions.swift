@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 Touch Instinct
+//  Copyright (c) 2019 Touch Instinct
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the Software), to deal
@@ -20,10 +20,16 @@
 //  THE SOFTWARE.
 //
 
-public extension DefaultSettings {
+import UserAuthenticationKit
 
-    enum PassCodeSettings {
-        public static let maxPassCodeEnterAttempts: UInt = 3
-        public static let passCodeLength: UInt = 4
+extension BasePassCodeEnterFlowCoordinator {
+    convenience init() {
+        let biometricsService = BaseBiometricsService()
+        let biometryTypeString = biometricsService.isFaceIdSupported ? "FaceID" : "TouchID"
+        let authenticationParameters = BiometricsAuthenticationParameters(reason: "Use \(biometryTypeString) to log in")
+
+        self.init(authenticationParameters: authenticationParameters,
+                  title: "Enter pass code",
+                  biometricsService: biometricsService)
     }
 }

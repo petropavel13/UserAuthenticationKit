@@ -23,15 +23,15 @@
 import UIKit
 
 open class BasePassCodeViewModel {
-
     public struct Settings {
         let passCodeLength: UInt
         let resetWhenEnterInBackground: Bool
-        let requestBiometricsAuthenticationWhenEnterForeground: Bool
+        let requestBiometricsAuthWhenEnterForeground: Bool
     }
 
     private let settings: Settings
     private var flowCoordinator: PassCodeFlowCoordinator
+    private let passCodeStorage: PassCodeStorage
     private let inputValidator: PassCodeValidator
     private let notificationCenter = NotificationCenter.default
 
@@ -39,14 +39,16 @@ open class BasePassCodeViewModel {
 
     private var currentPassCode = ""
 
-    private var appDidEnterInBackgroundObserver: NSObjectProtocol?
-    private var appWillEnterInForegroundObserver: NSObjectProtocol?
+    private var didEnterInBackgroundObserver: NSObjectProtocol?
+    private var willEnterInForegroundObserver: NSObjectProtocol?
 
     public init(flowCoordinator: PassCodeFlowCoordinator,
+                passCodeStorage: PassCodeStorage = BasePassCodeStorage(),
                 settings: Settings = .defaultSettings,
                 inputValidator: PassCodeValidator = BasePassCodeValidator(validationRules: [])) {
-        
+
         self.flowCoordinator = flowCoordinator
+        self.passCodeStorage = passCodeStorage
         self.settings = settings
         self.inputValidator = inputValidator
 
@@ -56,28 +58,26 @@ open class BasePassCodeViewModel {
             bindToDidEnterBackgroundNotifications()
         }
 
-        if settings.requestBiometricsAuthenticationWhenEnterForeground {
+        if settings.requestBiometricsAuthWhenEnterForeground {
             bindToWillEnterForegroundNotifications()
         }
     }
 
     deinit {
-        notificationCenter.remove(nillableObserver: appDidEnterInBackgroundObserver)
-        notificationCenter.remove(nillableObserver: appWillEnterInForegroundObserver)
+        notificationCenter.remove(nillableObserver: didEnterInBackgroundObserver)
+        notificationCenter.remove(nillableObserver: willEnterInForegroundObserver)
     }
-
 }
 
 extension BasePassCodeViewModel: PassCodeFlowDelegate {
-
     public func flowDidTransition(to state: PassCodeState) {
         delegate?.transition(to: state)
-    }
 
+        resetEnteredPassCode()
+    }
 }
 
 public extension BasePassCodeViewModel {
-
     var passCodeLength: UInt {
         return settings.passCodeLength
     }
@@ -88,6 +88,14 @@ public extension BasePassCodeViewModel {
 
     var stateTitle: String {
         return flowCoordinator.currentStateTitle
+    }
+
+    var canAuthenticateWithBiometrics: Bool {
+        guard let biometricsFlowCoordinator = flowCoordinator as? PassCodeBiometricsFlowCoordinator else {
+            return false
+        }
+
+        return biometricsFlowCoordinator.canAuthenticateWithBiometrics
     }
 
     func didEnter(digit: String) {
@@ -101,6 +109,10 @@ public extension BasePassCodeViewModel {
 
     func resetEnteredPassCode() {
         currentPassCode = ""
+    }
+
+    func resetStoredPassCode() {
+        passCodeStorage.clear()
     }
 
     func startFlow() {
@@ -118,21 +130,17 @@ public extension BasePassCodeViewModel {
     func update(flowCoordinator: PassCodeFlowCoordinator) {
         self.flowCoordinator = flowCoordinator
     }
-
 }
 
 public extension BasePassCodeViewModel.Settings {
-
     static var defaultSettings: BasePassCodeViewModel.Settings {
         return .init(passCodeLength: DefaultSettings.PassCodeSettings.passCodeLength,
                      resetWhenEnterInBackground: false,
-                     requestBiometricsAuthenticationWhenEnterForeground: true)
+                     requestBiometricsAuthWhenEnterForeground: true)
     }
-
 }
 
 private extension BasePassCodeViewModel {
-
     func validateCurrentPassCode() {
         let failedRules = inputValidator.validate(passCode: currentPassCode)
 
@@ -140,7 +148,7 @@ private extension BasePassCodeViewModel {
             delegate?.invalid(passCode: currentPassCode, failedRules: failedRules)
         } else if passCodeLength == UInt(currentPassCode.count) {
             let newState = flowCoordinator.didFinishEnter(passCode: currentPassCode)
-            delegate?.transition(to: newState)
+            flowDidTransition(to: newState)
         }
     }
 
@@ -151,29 +159,26 @@ private extension BasePassCodeViewModel {
     }
 
     func bindToDidEnterBackgroundNotifications() {
-        appDidEnterInBackgroundObserver = notificationCenter.addObserver(forName: UIApplication.didEnterBackgroundNotification,
-                                                                         object: nil,
-                                                                         queue: .main) { [weak self] _ in
-                                                                            self?.resetFlow()
+        didEnterInBackgroundObserver = notificationCenter.addObserver(forName: UIApplication.didEnterBackgroundNotification,
+                                                                      object: nil,
+                                                                      queue: .main) { [weak self] _ in
+                                                                        self?.resetFlow()
         }
     }
 
     func bindToWillEnterForegroundNotifications() {
-        appWillEnterInForegroundObserver = notificationCenter.addObserver(forName: UIApplication.willEnterForegroundNotification,
-                                                                          object: nil,
-                                                                          queue: .main) { [weak self] _ in
-                                                                            self?.didRequestBiometricsAuthentication()
+        willEnterInForegroundObserver = notificationCenter.addObserver(forName: UIApplication.willEnterForegroundNotification,
+                                                                       object: nil,
+                                                                       queue: .main) { [weak self] _ in
+                                                                        self?.didRequestBiometricsAuthentication()
         }
     }
-
 }
 
 private extension NotificationCenter {
-
     func remove(nillableObserver: NSObjectProtocol?) {
         if let observer = nillableObserver {
             removeObserver(observer)
         }
     }
-
 }

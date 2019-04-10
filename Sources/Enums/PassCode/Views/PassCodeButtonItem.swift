@@ -23,22 +23,21 @@
 import UIKit.UIImage
 
 public enum PassCodeButtonItem {
-
     case digit(UInt)
     case backspace(UIImage)
     case biometrics(UIImage)
     case custom(PassCodeButtonRepresentable)
-
 }
 
 extension PassCodeButtonItem: PassCodeButtonRepresentable {
-
     public var title: String? {
         switch self {
         case let .digit(number):
             return String(number)
+
         case .backspace, .biometrics:
             return nil
+
         case let .custom(buttonRepresentable):
             return buttonRepresentable.title
         }
@@ -48,13 +47,15 @@ extension PassCodeButtonItem: PassCodeButtonRepresentable {
         switch self {
         case let .backspace(image):
             return image
+
         case let .biometrics(image):
             return image
+
         case .digit:
             return nil
+
         case let .custom(buttonRepresentable):
             return buttonRepresentable.image
         }
     }
-
 }

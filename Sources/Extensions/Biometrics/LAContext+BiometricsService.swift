@@ -22,10 +22,10 @@
 
 import LocalAuthentication
 
+@available(tvOS 10.0, *)
 extension LAContext: BiometricsService {
 
     public var context: LAContext {
         return self
     }
-
 }
