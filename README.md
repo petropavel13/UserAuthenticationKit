@@ -3,4 +3,4 @@ UserAuthenticationKit - UI and non-UI components for local user authentication i
 
 Current implementation screenshot:
 
-![](example_screenshot.png)
+<img src="example_screenshot.png" width="375"/>
