@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage        = "https://github.com/TouchInstinct/UserAuthenticationKit"
   s.license         = "Apache License, Version 2.0"
   s.author          = "Touch Instinct"
-  s.source          = { :git => "https://github.com/TouchInstinct/UserAuthenticationKit.git", :tag => s.version }
+  s.source          = { :git => "https://github.com/petropavel13/UserAuthenticationKit.git", :tag => s.version }
   s.platform        = :ios, '9.0'
 
   s.subspec 'Core' do |ss|
@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   end
 
   s.default_subspec = 'Core'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
 end
